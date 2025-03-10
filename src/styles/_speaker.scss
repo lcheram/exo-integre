@@ -1,3 +1,7 @@
+.speakers {
+  background: var(--bg-color);
+}
+
 .speaker {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -5,9 +9,32 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid green;
+  padding: 1rem;
   & img {
     width: 80%;
     border-radius: 360px;
+    &::after {
+      content: url("../images/elts/pattern_stripes.png"); //mauvais chemin ? ou mauvaise syntaxe ? -> rajout psuedo élément image après une image
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .speakers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-inline: 2rem;
+  }
+  .speaker {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-block: 0;
+    padding-inline: 0;
+    & img {
+      border-radius: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -15,16 +42,6 @@
   .speakers {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-  }
-  .speaker {
-    display: flex;
-    flex-direction: column-reverse;
-    padding-block: 0;
-    & img {
-      border-radius: 0;
-      width: 100%;
-    }
   }
 }
 // media query : reverse column dans le container lui-même et grid template change sur le parent pour 4 columns

@@ -1,6 +1,6 @@
-.wrapper {
+/*.wrapper {
   margin: 1rem;
-}
+}*/
 
 /*.pattern {
   display: flex;
@@ -19,7 +19,11 @@
   flex-direction: column;
   //margin-block-start: -5%;
   gap: 1rem;
-  background: blueviolet;
+  background: var(--main-color);
+  //mettre un gradient linear ici
+  &::before {
+    content: url("images/elts/pattern_stripes.png"); //ne fonctionne pas, lien ou bien écriture ?
+  }
   picture {
     width: 100%;
   }
@@ -42,6 +46,7 @@
 @media screen and (min-width: 1024px) {
   .banner_content {
     flex-direction: row;
+    justify-content: center;
     picture {
       width: 30%;
     }
