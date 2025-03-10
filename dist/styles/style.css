@@ -209,7 +209,8 @@ footer {
   justify-content: center;
 }
 .tickets__button {
-  background: orange;
+  background: rgb(255, 119, 0);
+  color: white;
   border-radius: 90px;
   padding-inline: 2rem;
   padding-block: 1rem;
@@ -220,7 +221,8 @@ footer {
 
 .partners {
   display: flex;
+  justify-content: space-between;
 }
 .partners img {
-  max-width: 20%;
+  max-width: 10%;
 }/*# sourceMappingURL=style.css.map */

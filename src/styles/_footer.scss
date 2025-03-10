@@ -8,7 +8,8 @@ footer {
   display: flex;
   justify-content: center;
   &__button {
-    background: orange;
+    background: rgb(255, 119, 0);
+    color: white;
     border-radius: 90px;
     padding-inline: 2rem;
     padding-block: 1rem;
@@ -19,9 +20,11 @@ footer {
 }
 
 .partners {
+  // revoir en mobile : créer deux div ?
   display: flex;
+  justify-content: space-between;
   img {
     // casse le responsive parce que je dois mettre des vraies tailles à mes images
-    max-width: 20%;
+    max-width: 10%;
   }
 }
