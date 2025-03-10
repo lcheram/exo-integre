@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeConf</title>
+    <link rel="stylesheet" href="styles/style.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <!--sûrement moyen de faire juste une seule nav et de changer les paramètres quand en desktop : vérifier et tester, pour le moment je pars sur 2 nav et j'en cache une quand media query-->
+        <nav class="mobile_nav">
+          <h1 class="header_title">
+            <img
+              src="images/logos_assets_codeconf/logo2023.svg"
+              alt="logo code Conf 2025"
+            />Code Conf 2025
+          </h1>
+          <div class="mobile_nav__menu">
+            <ul class="mobile_nav__icons">
+              <li><a href="#">Schedule</a></li>
+              <!--mettre schedule en speudo element before puis font-size 0 sur le pseudo element ?-->
+              <li><a href="#">Burger menu</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <nav class="desktop_nav">
+          <h1 class="header_title">
+            <img
+              src="images/logos_assets_codeconf/logo2023.svg"
+              alt="logo code Conf 2025"
+            />Code Conf 2025
+          </h1>
+
+          <div class="desktop_nav__menu">
+            <ul class="desktop_nav__menu-list">
+              <li class="desktop_nav__menu-item"><a href="#">Event</a></li>
+              <li class="desktop_nav__menu-item"><a href="#">Speakers</a></li>
+              <li class="desktop_nav__menu-item"><a href="#">Team</a></li>
+              <li class="desktop_nav__menu-item"><a href="#">Contact</a></li>
+            </ul>
+            <div class="desktop_nav__menu-list">
+              <ul class="desktop_nav__menu-icons">
+                <li><a href="#">Schedule</a></li>
+                <!--schedule avec pseudo element before font icon moon-->
+                <li><a href="#">Search</a></li>
+                <!--search desktop juste icone visible, et search en pseudo element after non visible ?-->
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="banner">
+          <div class="pattern">
+            <img src="images/elts/pattern-stripes-left.png" alt="" />
+            <img src="images/elts/pattern-stripes-right.png" alt="" />
+            <!--avant ou après speaker ? groupe puis justify content space between ? align self top ?-->
+          </div>
+          <div class="banner_content">
+            <picture>
+              <!--z-index à 1000-->
+              <source
+                media="(max-width: 300px)"
+                srcset="images/page-picture/presents.png"
+              />
+              <source
+                media="(min-width: 301px)"
+                srcset="images/page-picture/presents@2x.png"
+              />
+              <source
+                media="(min-width: 1024px)"
+                srcset="images/page-picture/presents@3x.png"
+              />
+              <img src="" alt="gars qui représente les talk là" />
+            </picture>
+
+            <div class="banner_content__text">
+              <h2>Speaker Edition 2023</h2>
+              <p>
+                Discover the speakers and the topics or suggest your own topic
+                for our next event
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="speakers"></section>
+
+        <section class="form_speaker"></section>
+      </main>
+
+      <footer>
+        <div class="localisation"></div>
+        <div class="partners"></div>
+        <div class="social"></div>
+        <div class="contact"></div>
+      </footer>
+    </div>
+  </body>
+</html>
