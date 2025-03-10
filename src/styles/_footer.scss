@@ -3,3 +3,24 @@ footer {
   color: white;
   padding-inline: 2rem;
 }
+
+.tickets {
+  display: flex;
+  justify-content: center;
+  &__button {
+    background: orange;
+    border-radius: 90px;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    font-size: 2rem;
+    border: none;
+    margin-block-start: -30px; // revoir les unités de mesure
+  }
+}
+
+.partners {
+  display: flex;
+  &__line {
+    display: flex;
+  }
+}

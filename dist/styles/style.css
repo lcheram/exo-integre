@@ -202,4 +202,25 @@ footer {
   background: rgb(36, 35, 35);
   color: white;
   padding-inline: 2rem;
+}
+
+.tickets {
+  display: flex;
+  justify-content: center;
+}
+.tickets__button {
+  background: orange;
+  border-radius: 90px;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  font-size: 2rem;
+  border: none;
+  margin-block-start: -30px;
+}
+
+.partners {
+  display: flex;
+}
+.partners__line {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
