@@ -20,7 +20,8 @@ footer {
 
 .partners {
   display: flex;
-  &__line {
-    display: flex;
+  img {
+    // casse le responsive parce que je dois mettre des vraies tailles à mes images
+    max-width: 20%;
   }
 }

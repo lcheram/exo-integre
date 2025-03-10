@@ -221,6 +221,6 @@ footer {
 .partners {
   display: flex;
 }
-.partners__line {
-  display: flex;
+.partners img {
+  max-width: 20%;
 }/*# sourceMappingURL=style.css.map */
