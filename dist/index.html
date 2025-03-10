@@ -96,6 +96,7 @@
         </div>
 
         <div class="speakers">
+          <!--rajout div content deploy en display none de base-->
           <div class="speaker">
             <div class="speaker__content">
               <h3>Chris Coyier</h3>
@@ -214,8 +215,13 @@
 
         <section class="form_speaker">
           <h2 class="form_speaker__title">Become Speaker</h2>
-          <p class="form_speaker__text bold_text"></p>
-          <p class="form_speaker__text"></p>
+          <p class="form_speaker__text bold_text">
+            Do you have a topic that you like ?
+          </p>
+          <p class="form_speaker__text">
+            Submit it for the next event filling out the form below. Do not
+            forget to specify the subject and the related keywords
+          </p>
           <form action="" method="get">
             <label for="name">Name</label>
             <!--label font-size: 0 dans le css-->
@@ -251,14 +257,56 @@
               required
               placeholder="Short details*"
             />
-            <input type="submit" required />
+            <button type="submit" required>Send your Subject</button>
           </form>
+          <p class="form_speaker__text bold_text">
+            or just participate to the present event ...
+          </p>
         </section>
       </main>
 
       <footer>
-        <div class="localisation"></div>
-        <div class="partners"></div>
+        <div class="tickets">
+          <button class="tickets__button">get ticket</button>
+          <!--rajout icone paypal et carte banque en css pseudo-element after-->
+        </div>
+        <div class="localisation">
+          <div class="localisation__text">
+            <h3>The Las Vegas Convention Center</h3>
+            <span><p>3150 Paradise Rd., Las Vegas, NV 89109</p></span>
+            <!--span = changer le style ou bien mettre une classe/id ?-->
+            <p>
+              The Las Vegas Convention Center (LVCC), located adjacent to the
+              Las Vegas Strip, encompasses approximately 3.2 million square feet
+              with exhibit space of 2 million square feet and meeting space of
+              nearly 250,000 square feet.
+            </p>
+            <p></p>
+          </div>
+          <div class="localisation__map">
+            <img src="" alt="map" />
+          </div>
+        </div>
+        <div class="partners">
+          <img src="images/logos_assets_codeconf/cisco.svg" alt="cisco logo" />
+          <img
+            src="images/logos_assets_codeconf/amazon_s3.svg"
+            alt="s3 amazon logo"
+          />
+          <img src="images/logos_assets_codeconf/nick.svg" alt="nick logo" />
+          <img
+            src="images/logos_assets_codeconf/meetup.svg"
+            alt="meetup logo"
+          />
+          <img
+            src="images/logos_assets_codeconf/stripe.svg"
+            alt="stripe logo"
+          />
+          <img
+            src="images/logos_assets_codeconf/mailchimp.svg"
+            alt="mailchimp logo"
+          />
+        </div>
         <div class="social"></div>
         <div class="contact"></div>
       </footer>
