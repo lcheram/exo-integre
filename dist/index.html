@@ -212,7 +212,48 @@
           </div>
         </div>
 
-        <section class="form_speaker"></section>
+        <section class="form_speaker">
+          <h2 class="form_speaker__title">Become Speaker</h2>
+          <p class="form_speaker__text bold_text"></p>
+          <p class="form_speaker__text"></p>
+          <form action="" method="get">
+            <label for="name">Name</label>
+            <!--label font-size: 0 dans le css-->
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="on"
+              required
+              placeholder="Name*"
+            />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              required
+              autocomplete="on"
+              placeholder="Email*"
+            />
+            <label for="subject">Your subject</label>
+            <input
+              type="text"
+              id="subject"
+              required
+              placeholder="Your Subject*"
+            />
+            <label for="keywords">Keywords</label>
+            <input type="text" id="keywords" required placeholder="Keywords*" />
+            <label for="details">Short details</label>
+            <input
+              type="textarea"
+              id="details"
+              required
+              placeholder="Short details*"
+            />
+            <input type="submit" required />
+          </form>
+        </section>
       </main>
 
       <footer>
