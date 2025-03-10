@@ -6,6 +6,7 @@
     <title>CodeConf</title>
     <link rel="stylesheet" href="styles/style.min.css" />
   </head>
+
   <body>
     <div class="wrapper">
       <header>
@@ -88,7 +89,25 @@
           </div>
         </section>
 
-        <section class="speakers"></section>
+        <section class="speakers">
+          <div class="breadscrumb">
+            <ul class="breadscrumb__list">
+              <li class="breadscrumb__item home">Home</li>
+              <!--mettre icone, et rajouter "home" en pseudo element after, puis font-size 0;-->
+              <li class="breadscrumb__item">Speakers</li>
+            </ul>
+          </div>
+          <div class="speaker">
+            <div class="speaker__images">
+              <img src="images/orators/chris@3x.jpg" alt="visage de chris" />
+              <img src="images/elts/pattern_stripes.png" alt="" />
+            </div>
+            <div class="speaker__content">
+              <h3>Chris</h3>
+              <span>Son truc là</span>
+            </div>
+          </div>
+        </section>
 
         <section class="form_speaker"></section>
       </main>

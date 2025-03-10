@@ -4,12 +4,46 @@
 
 .pattern {
   display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
+  & img {
+    max-width: 40%;
+    max-height: 40%;
+  }
 }
 
 .banner_content {
   display: flex;
-  margin-block-start: -10%;
+  flex-direction: column;
+  margin-block-start: -5%;
+  gap: 1rem;
+  background: blueviolet;
+  picture {
+    width: 100%;
+  }
   &__text {
+    color: white;
     align-self: center;
+    justify-self: center;
+    margin-block-start: -30%;
+    & p {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner_content {
+    flex-direction: row;
+    picture {
+      width: 30%;
+    }
+    &__text {
+      margin-block-start: 0;
+      & p {
+        display: block;
+      }
+    }
   }
 }
