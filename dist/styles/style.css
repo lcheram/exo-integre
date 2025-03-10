@@ -21,21 +21,20 @@ ul {
   margin: 1rem;
 }
 
-.pattern {
+/*.pattern {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
   overflow: hidden;
-}
-.pattern img {
-  max-width: 40%;
-  max-height: 40%;
-}
-
+  & img {
+    max-width: 40%;
+    max-height: 40%;
+  }
+    // n'existe plus dans cette version : je vais mettre des pseudo éléments before et after
+}*/
 .banner_content {
   display: flex;
   flex-direction: column;
-  margin-block-start: -5%;
   gap: 1rem;
   background: blueviolet;
 }
@@ -50,6 +49,11 @@ ul {
 }
 .banner_content__text p {
   display: none;
+}
+
+.breadcrumb__list {
+  display: flex;
+  gap: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -116,5 +120,33 @@ ul {
   }
   .desktop_nav {
     display: flex;
+  }
+}
+.speaker {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid green;
+}
+.speaker img {
+  width: 80%;
+  border-radius: 360px;
+}
+
+@media screen and (min-width: 1024px) {
+  .speakers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .speaker {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-block: 0;
+  }
+  .speaker img {
+    border-radius: 0;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

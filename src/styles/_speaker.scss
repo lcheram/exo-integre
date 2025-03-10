@@ -1,0 +1,30 @@
+.speaker {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  //display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid green;
+  & img {
+    width: 80%;
+    border-radius: 360px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .speakers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  .speaker {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-block: 0;
+    & img {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+}
+// media query : reverse column dans le container lui-même et grid template change sur le parent pour 4 columns

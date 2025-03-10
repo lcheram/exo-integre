@@ -2,7 +2,7 @@
   margin: 1rem;
 }
 
-.pattern {
+/*.pattern {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
@@ -11,12 +11,13 @@
     max-width: 40%;
     max-height: 40%;
   }
-}
+    // n'existe plus dans cette version : je vais mettre des pseudo éléments before et after
+}*/
 
 .banner_content {
   display: flex;
   flex-direction: column;
-  margin-block-start: -5%;
+  //margin-block-start: -5%;
   gap: 1rem;
   background: blueviolet;
   picture {
@@ -31,6 +32,11 @@
       display: none;
     }
   }
+}
+
+.breadcrumb__list {
+  display: flex;
+  gap: 1rem;
 }
 
 @media screen and (min-width: 1024px) {

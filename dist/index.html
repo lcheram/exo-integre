@@ -56,11 +56,6 @@
 
       <main>
         <section class="banner">
-          <div class="pattern">
-            <img src="images/elts/pattern-stripes-left.png" alt="" />
-            <img src="images/elts/pattern-stripes-right.png" alt="" />
-            <!--avant ou après speaker ? groupe puis justify content space between ? align self top ?-->
-          </div>
           <div class="banner_content">
             <picture>
               <!--z-index à 1000-->
@@ -77,6 +72,7 @@
                 srcset="images/page-picture/presents@3x.png"
               />
               <img src="" alt="gars qui représente les talk là" />
+              <!--sortir l'image du flux et mettre le background uniquement sur la section . comme ça sa petite tête ressort du mauve ?-->
             </picture>
 
             <div class="banner_content__text">
@@ -89,25 +85,52 @@
           </div>
         </section>
 
-        <section class="speakers">
-          <div class="breadscrumb">
-            <ul class="breadscrumb__list">
-              <li class="breadscrumb__item home">Home</li>
-              <!--mettre icone, et rajouter "home" en pseudo element after, puis font-size 0;-->
-              <li class="breadscrumb__item">Speakers</li>
-            </ul>
+        <div class="breadcrumb">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item home">Home</li>
+            <!--mettre icone, et rajouter "home" en pseudo element after, puis font-size 0;-->
+            <li class="breadcrumb__item">Speakers</li>
+          </ul>
+        </div>
+
+        <div class="speakers">
+          <div class="speaker">
+            <div class="speaker__content">
+              <h3>Chris Coyier</h3>
+              <p>Milwaukee, WI</p>
+            </div>
+            <div class="speaker__portrait">
+              <img src="images/orators/chris@3x.jpg" alt="Chris' portrait" />
+            </div>
           </div>
           <div class="speaker">
-            <div class="speaker__images">
-              <img src="images/orators/chris@3x.jpg" alt="visage de chris" />
-              <img src="images/elts/pattern_stripes.png" alt="" />
-            </div>
             <div class="speaker__content">
-              <h3>Chris</h3>
-              <span>Son truc là</span>
+              <h3>Chris Coyier</h3>
+              <p>Milwaukee, WI</p>
+            </div>
+            <div class="speaker__portrait">
+              <img src="images/orators/chris@3x.jpg" alt="Chris' portrait" />
             </div>
           </div>
-        </section>
+          <div class="speaker">
+            <div class="speaker__content">
+              <h3>Chris Coyier</h3>
+              <p>Milwaukee, WI</p>
+            </div>
+            <div class="speaker__portrait">
+              <img src="images/orators/chris@3x.jpg" alt="Chris' portrait" />
+            </div>
+          </div>
+          <div class="speaker">
+            <div class="speaker__content">
+              <h3>Chris Coyier</h3>
+              <p>Milwaukee, WI</p>
+            </div>
+            <div class="speaker__portrait">
+              <img src="images/orators/chris@3x.jpg" alt="Chris' portrait" />
+            </div>
+          </div>
+        </div>
 
         <section class="form_speaker"></section>
       </main>
