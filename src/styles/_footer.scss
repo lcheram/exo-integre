@@ -16,6 +16,7 @@ footer {
     font-size: 2rem;
     border: none;
     margin-block-start: -30px; // revoir les unités de mesure
+    text-transform: lowercase;
   }
 }
 
@@ -36,8 +37,12 @@ footer {
   img {
     // casse le responsive parce que je dois mettre des vraies tailles à mes images
     max-width: 80%;
-    fill: white;
+    fill: white; // ne fonctionne pas ? On peut modifier le svg par feuille de style si celui-ci est inséré dans la page (entre des balises svg), mais pas si celui-ci est référencé comme image.
   }
+}
+
+.social__content {
+  display: flex;
 }
 
 @media screen and (min-width: 650px) {
