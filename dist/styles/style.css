@@ -9,8 +9,17 @@ body {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
 img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 ul {
@@ -19,10 +28,12 @@ ul {
 
 a {
   text-decoration: none;
+  padding: 0;
 }
 
 button {
   text-transform: uppercase;
+  padding: 0;
 }
 
 :root {
@@ -41,22 +52,6 @@ button {
   gap: 1rem;
   background: var(--main-color);
 }
-.banner_content::before {
-  content: url("images/elts/pattern_stripes.png");
-}
-.banner_content picture {
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-.banner_content picture::before {
-  content: "";
-  height: 1rem;
-  width: 7rem;
-  background: url("../images/elts/pattern-strip-left.png");
-  background-size: 2rem;
-  inset-inline: 0;
-}
 .banner_content__text {
   color: white;
   align-self: center;
@@ -65,6 +60,20 @@ button {
 }
 .banner_content__text p {
   display: none;
+}
+
+picture {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+picture::before {
+  content: "";
+  position: absolute;
+  height: 4rem;
+  width: 7rem;
+  background: url("https://www.oppaca.com/hubfs/Imported_Blog_Media/158_cop2-1.jpg");
+  background-size: 5rem;
 }
 
 .form_speaker {
@@ -216,51 +225,160 @@ form button {
     display: flex;
   }
 }
-.speaker_main__content {
+.speaker_main {
+  padding-inline: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.speaker_main__infos {
+  display: flex;
+  flex-direction: column;
+}
+.speaker_main__infos-name {
+  margin-block-end: 0;
+}
+.speaker_main__infos-school {
+  margin-block-end: 0;
+}
+.speaker_main__portrait {
+  display: flex;
+  flex-direction: column;
+}
+.speaker_main__portrait img {
+  width: 50%;
+  align-self: end;
+  border-radius: 100%;
+  margin-block: 1rem;
+}
+.speaker_main__portrait button {
+  display: none;
+}
+
+.speaker_details {
+  background: var(--detail-color);
+  padding-inline: 2rem;
+}
+.speaker_details__description {
+  display: flex;
+  flex-direction: column;
+}
+.speaker_details__footer {
   display: flex;
   justify-content: space-between;
-  padding-inline: 1rem;
-  padding-block-end: 2rem;
-  align-items: center;
-  background: var(--bg-color);
 }
-.speaker_main__btn_hover {
-  display: none;
-  border: none;
-  word-wrap: wrap;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 100%;
-  background: var(--cta1-color);
-  color: white;
-  position: absolute;
-  inset: 50%;
+.speaker_details__footer_practical {
+  display: flex;
+  gap: 1rem;
 }
-.speaker_main__img {
-  position: relative;
+
+.speaker_details {
+  padding-block: 2rem;
 }
-.speaker_main img {
-  width: 20%;
-  border-radius: 360px;
+.speaker_details__description {
+  display: flex;
+}
+.speaker_details__footer {
+  display: flex;
+}
+.speaker_details__footer_btn {
+  padding-inline: 1.5rem;
+  padding-block: 0.3rem;
+  background: var(--detail-color);
+  border-radius: 50px;
+  border: 1px solid var(--cta2-color);
+  color: var(--cta2-color);
+}
+
+@media screen and (min-width: 650px) {
+  .speakers_all {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-inline: 2rem;
+  }
+  .speaker_main {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .speaker_main__portrait {
+    position: relative;
+  }
+  .speaker_main__portrait img {
+    border-radius: 0;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .speaker_main__portrait button {
+    display: block;
+    position: absolute;
+    inset: 50%;
+  }
+  .speaker_main__infos {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .speakers_all {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-inline: 2rem;
+  }
+}
+/*.speaker_main {
+  //border: 1px solid green;
+  //background: var(--bg-color);
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+    padding-block-end: 2rem;
+    align-items: center;
+    background: var(--bg-color);
+  }
+  &__btn_hover {
+    display: none;
+    border: none;
+    word-wrap: wrap;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    background: var(--cta1-color);
+    color: white;
+    position: absolute;
+    inset: 50%; //ça marcherait si le bouton était dans la même div que l'image hu hu hu ... go changer la structure de ma carte speaker là
+  }
+  &__img {
+    // n'existe plus pour le moment, je dois refaire ma structure (mercredi, ajd je fatigue trop je n'arrive plus à me concentrer
+    position: relative;
+  }
+  & img {
+    width: 20%;
+    border-radius: 360px;
+  }
 }
 
 .speaker_detail {
+  //onclick display flex ? ou jouer avec la hauteur et les overflow hidden pour mettre des transitions ?
   display: none;
+  //display: flex;
   flex-direction: column;
   background: var(--detail-color);
   padding-inline: 1rem;
   padding-block-end: 2rem;
-}
-.speaker_detail__footer {
-  display: flex;
-  justify-content: space-between;
-}
-.speaker_detail__footer button {
-  height: -moz-fit-content;
-  height: fit-content;
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
-  align-self: end;
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    button {
+      height: fit-content;
+      padding-block: 0.5rem;
+      padding-inline: 1rem;
+      align-self: end;
+    }
+  }
 }
 
 @media screen and (min-width: 650px) {
@@ -273,30 +391,38 @@ form button {
   .speaker_main {
     padding: 1rem;
     position: relative;
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-block: 0;
+      padding-inline: 0;
+      & img {
+        border-radius: 0;
+        width: 100%;
+      }
+    }
+    .speaker_main__content:hover {
+      .speaker_main__btn_hover {
+        display: block;
+      }
+    }
   }
-  .speaker_main__content {
-    display: flex;
-    flex-direction: column-reverse;
-    padding-block: 0;
-    padding-inline: 0;
-  }
-  .speaker_main__content img {
-    border-radius: 0;
-    width: 100%;
-  }
-  .speaker_main .speaker_main__content:hover .speaker_main__btn_hover {
-    display: block;
-  }
-  .speaker_detail__footer button {
-    align-self: center;
+  .speaker_detail {
+    &__footer {
+      button {
+        align-self: center;
+      }
+    }
   }
 }
+
 @media screen and (min-width: 1024px) {
   .speakers_all {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 }
+// media query : reverse column dans le container lui-même et grid template change sur le parent pour 4 columns*/
 footer {
   background: var(--footer-color);
   color: white;

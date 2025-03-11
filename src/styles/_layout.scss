@@ -6,6 +6,15 @@
   gap: 1rem;
   background: var(--main-color);
   //mettre un gradient linear ici
+  &__text {
+    color: white;
+    align-self: center;
+    justify-self: center;
+    margin-block-start: -30%;
+    & p {
+      display: none;
+    }
+  }
 }
 picture {
   width: 100%;
@@ -18,15 +27,6 @@ picture {
     width: 7rem;
     background: url("https://www.oppaca.com/hubfs/Imported_Blog_Media/158_cop2-1.jpg"); // ne fonctionne toujours pas, même avec une image web
     background-size: 5rem;
-  }
-}
-&__text {
-  color: white;
-  align-self: center;
-  justify-self: center;
-  margin-block-start: -30%;
-  & p {
-    display: none;
   }
 }
 
