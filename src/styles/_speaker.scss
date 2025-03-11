@@ -27,7 +27,7 @@
   display: none;
   //display: flex;
   flex-direction: column;
-  background: #ffede5;
+  background: var(--detail-color);
   padding-inline: 1rem;
   padding-block-end: 2rem;
   &__footer {

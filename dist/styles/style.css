@@ -18,8 +18,11 @@ ul {
 }
 
 :root {
-  --bg-color: rgb(234, 233, 233);
+  --bg-color: #f8f8f8;
   --main-color: rgb(99, 30, 239);
+  --detail-color: #ffede5;
+  --footer-color: #343237;
+  --cta-color: #ff0000;
 }
 
 /*.wrapper {
@@ -60,9 +63,12 @@ ul {
 }
 
 .form_speaker {
-  padding-inline: 2rem;
   display: flex;
   flex-direction: column;
+  margin-block-end: 5rem;
+  padding-inline: 2rem;
+  align-items: center;
+  gap: 1rem;
 }
 .form_speaker label {
   font-size: 0;
@@ -70,6 +76,22 @@ ul {
 .form_speaker input {
   border: none;
   border-block-end: 1px solid black;
+  padding-block: 1rem;
+  margin-block-end: 1rem;
+  width: 100%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+form button {
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
 }
 
 .hero {
@@ -93,6 +115,20 @@ ul {
   }
   .banner_content picture {
     width: 50%;
+  }
+  form {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .name {
+    grid-area: 1/1;
+  }
+  .mail {
+    grid-area: 1/2;
+  }
+  .short-details {
+    grid-area: 3/1/-1/-1;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -183,7 +219,7 @@ ul {
 .speaker_detail {
   display: none;
   flex-direction: column;
-  background: #ffede5;
+  background: var(--detail-color);
   padding-inline: 1rem;
   padding-block-end: 2rem;
 }
@@ -230,7 +266,7 @@ ul {
   }
 }
 footer {
-  background: rgb(36, 35, 35);
+  background: var(--footer-color);
   color: white;
   padding-inline: 2rem;
 }
@@ -240,7 +276,7 @@ footer {
   justify-content: center;
 }
 .tickets__button {
-  background: rgb(255, 119, 0);
+  background: var(--cta-color);
   color: white;
   border-radius: 90px;
   padding-inline: 2rem;

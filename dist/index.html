@@ -405,40 +405,56 @@
             forget to specify the subject and the related keywords
           </p>
           <form action="" method="get">
-            <label for="name">Name</label>
-            <!--label font-size: 0 dans le css-->
-            <input
-              type="text"
-              id="name"
-              name="name"
-              autocomplete="on"
-              required
-              placeholder="Name*"
-            />
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              required
-              autocomplete="on"
-              placeholder="Email*"
-            />
-            <label for="subject">Your subject</label>
-            <input
-              type="text"
-              id="subject"
-              required
-              placeholder="Your Subject*"
-            />
-            <label for="keywords">Keywords</label>
-            <input type="text" id="keywords" required placeholder="Keywords*" />
-            <label for="details">Short details</label>
-            <input
-              type="textarea"
-              id="details"
-              required
-              placeholder="Short details*"
-            />
+            <div class="name">
+              <!--je mets des div pour garder les labels readable malgré qu'ils soient en font-size zéro, pour des questions d'accessibilité ... p-e une meilleure solution quand même-->
+              <label for="name">Name</label>
+              <!--label font-size: 0 dans le css-->
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="on"
+                required
+                placeholder="Name*"
+              />
+            </div>
+            <div class="email">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                required
+                autocomplete="on"
+                placeholder="Email*"
+              />
+            </div>
+            <div class="subject">
+              <label for="subject">Your subject</label>
+              <input
+                type="text"
+                id="subject"
+                required
+                placeholder="Your Subject*"
+              />
+            </div>
+            <div class="keywords">
+              <label for="keywords">Keywords</label>
+              <input
+                type="text"
+                id="keywords"
+                required
+                placeholder="Keywords*"
+              />
+            </div>
+            <div class="short-details">
+              <label for="details">Short details</label>
+              <input
+                type="textarea"
+                id="details"
+                required
+                placeholder="Short details*"
+              />
+            </div>
             <button type="submit" required>Send your Subject</button>
           </form>
           <p class="form_speaker__text bold_text">

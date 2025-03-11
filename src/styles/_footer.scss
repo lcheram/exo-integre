@@ -1,5 +1,5 @@
 footer {
-  background: rgb(36, 35, 35);
+  background: var(--footer-color);
   color: white;
   padding-inline: 2rem;
 }
@@ -8,7 +8,7 @@ footer {
   display: flex;
   justify-content: center;
   &__button {
-    background: rgb(255, 119, 0);
+    background: var(--cta-color);
     color: white;
     border-radius: 90px;
     padding-inline: 2rem;
