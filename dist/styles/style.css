@@ -72,6 +72,16 @@ ul {
   border-block-end: 1px solid black;
 }
 
+.hero {
+  background: var(--bg-color);
+  margin-block: 0;
+  padding-block: 3rem;
+}
+
+.breadcrumb {
+  padding-block-end: 2rem;
+}
+
 .breadcrumb__list {
   display: flex;
   gap: 1rem;
@@ -154,46 +164,62 @@ ul {
     display: flex;
   }
 }
-.speakers {
-  background: var(--bg-color);
-}
-
-.speaker {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  justify-content: space-between;
-  align-items: center;
+.speaker_main {
   border: 1px solid green;
   padding: 1rem;
 }
-.speaker img {
-  width: 80%;
+.speaker_main__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.speaker_main img {
+  width: 20%;
   border-radius: 360px;
 }
-.speaker img::after {
+.speaker_main img::after {
   content: url("../images/elts/pattern_stripes.png");
 }
 
+.speaker_detail {
+  display: none;
+  flex-direction: column;
+}
+.speaker_detail__footer {
+  display: flex;
+  justify-content: space-between;
+}
+.speaker_detail__footer button {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  align-self: end;
+}
+
 @media screen and (min-width: 700px) {
-  .speakers {
+  .speakers_all {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding-inline: 2rem;
   }
-  .speaker {
+  .speaker_main__content {
     display: flex;
     flex-direction: column-reverse;
     padding-block: 0;
     padding-inline: 0;
   }
-  .speaker img {
+  .speaker_main__content img {
     border-radius: 0;
     width: 100%;
   }
+  .speaker_detail__footer button {
+    align-self: center;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .speakers {
+  .speakers_all {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }

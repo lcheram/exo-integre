@@ -1,17 +1,17 @@
-.speakers {
-  background: var(--bg-color);
+.speakers_all {
+  //background: var(--bg-color);
 }
 
-.speaker {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  //display: flex;
-  justify-content: space-between;
-  align-items: center;
+.speaker_main {
   border: 1px solid green;
   padding: 1rem;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   & img {
-    width: 80%;
+    width: 20%;
     border-radius: 360px;
     &::after {
       content: url("../images/elts/pattern_stripes.png"); //mauvais chemin ? ou mauvaise syntaxe ? -> rajout psuedo élément image après une image
@@ -19,14 +19,31 @@
   }
 }
 
+.speaker_detail {
+  //onclick display flex ? ou jouer avec la hauteur et les overflow hidden pour mettre des transitions ?
+  display: none;
+  //display: flex;
+  flex-direction: column;
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    button {
+      height: fit-content;
+      padding-block: 0.5rem;
+      padding-inline: 1rem;
+      align-self: end;
+    }
+  }
+}
+
 @media screen and (min-width: 700px) {
-  .speakers {
+  .speakers_all {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     padding-inline: 2rem;
   }
-  .speaker {
+  .speaker_main__content {
     display: flex;
     flex-direction: column-reverse;
     padding-block: 0;
@@ -36,10 +53,17 @@
       width: 100%;
     }
   }
+  .speaker_detail {
+    &__footer {
+      button {
+        align-self: center;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .speakers {
+  .speakers_all {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }

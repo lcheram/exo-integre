@@ -86,129 +86,310 @@
           </div>
         </section>
 
-        <div class="breadcrumb">
-          <!--mettre le fil d'ariane dans la section speakers, et mettre les speakers dans une nouvelle div speakers (sinon ça va casser la grid)-->
-          <ul class="breadcrumb__list">
-            <li class="breadcrumb__item home">Home</li>
-            <!--mettre icone, et rajouter "home" en pseudo element after, puis font-size 0;-->
-            <li class="breadcrumb__item">Speakers</li>
-          </ul>
-        </div>
+        <div class="hero">
+          <div class="breadcrumb">
+            <!--mettre le fil d'ariane dans la section speakers, et mettre les speakers dans une nouvelle div speakers (sinon ça va casser la grid)-->
+            <ul class="breadcrumb__list">
+              <li class="breadcrumb__item home">Home</li>
+              <!--mettre icone, et rajouter "home" en pseudo element after, puis font-size 0;-->
+              <li class="breadcrumb__item">Speakers</li>
+            </ul>
+          </div>
 
-        <div class="speakers">
-          <!--rajout div content deploy en display none de base-->
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Chris Coyier</h3>
-              <p>Milwaukee, WI</p>
+          <div class="speakers_all">
+            <!--rajout div content deploy en display none de base-->
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Chris Coyier</h3>
+                  <p>Milwaukee, WI</p>
+                </div>
+                <img src="images/orators/chris@3x.jpg" alt="Chris' portrait" />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">
+                  The All-Powerful Front-End Developer
+                </h4>
+                <p class="speaker_detail__txt">
+                  Without servers, we'd have no way to share our creations with
+                  the world
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>09:30 am</p>
+                  <p>R1</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/chris@3x.jpg" alt="Chris' portrait" />
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Sara Soueidan</h3>
+                  <p>Lebanon</p>
+                </div>
+                <img src="images/orators/sara@3x.jpg" alt="Sara's portrait" />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">Going Offline</h4>
+                <p class="speaker_detail__txt">
+                  You can re-visit my Web site even when you’re not connected to
+                  the Internet
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>10:15 am</p>
+                  <p>R1</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Sara Soueidan</h3>
-              <p>Lebanon</p>
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Eric Meyer</h3>
+                  <p>Cleveland, OH</p>
+                </div>
+                <img src="images/orators/eric@3x.jpg" alt="Eric's portrait" />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">Faux Grid Tracks</h4>
+                <p class="speaker_detail__txt">
+                  Is it possible to style the rows and columns of a [CSS]
+                  grid—the grid itself?
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>04:00 pm</p>
+                  <p>R1</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/sara@3x.jpg" alt="Sara's portrait" />
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Lea Verou</h3>
+                  <p>Cambridge, MA</p>
+                </div>
+                <img src="images/orators/lea@3x.jpg" alt="Lea's portrait" />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">Mavo</h4>
+                <p class="speaker_detail__txt">
+                  INew approachable way to create Web applications
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>04:00 pm</p>
+                  <p>R2</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Eric Meyer</h3>
-              <p>Cleveland, OH</p>
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Shirley Wu</h3>
+                  <p>San Francisco, CA</p>
+                </div>
+                <img
+                  src="images/orators/shirley@3x.jpg"
+                  alt="Shirley's portrait"
+                />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">
+                  655 Frustrations Doing Data Visualization
+                </h4>
+                <p class="speaker_detail__txt">
+                  Visualization teams spend more time visualizing than those on
+                  embedded teams
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>09:30 am</p>
+                  <p>R2</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/eric@3x.jpg" alt="Eric's portrait" />
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Luke Wroblewski</h3>
+                  <p>San Francisco, CA</p>
+                </div>
+                <img src="images/orators/luke@3x.jpg" alt="Luke's portrait" />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">The Way of the Web</h4>
+                <p class="speaker_detail__txt">
+                  Science fiction is not about predicting the future, but about
+                  what we need to have a future
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>11:30 am</p>
+                  <p>R1</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Lea Verou</h3>
-              <p>Cambridge, MA</p>
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Nicolas Gallagher</h3>
+                  <p>San Francisco, CA</p>
+                </div>
+                <img src="images/orators/nico@3x.jpg" alt="Nicolas' portrait" />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">
+                  Making SVG icon libraries for React apps
+                </h4>
+                <p class="speaker_detail__txt">
+                  Using SVG is currently the best way to create icon libraries
+                  for apps
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>02:00 pm</p>
+                  <p>R1</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/lea@3x.jpg" alt="Lea's portrait" />
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Rachel Andrew</h3>
+                  <p>Bristol, UK</p>
+                </div>
+                <img
+                  src="images/orators/rachel@3x.jpg"
+                  alt="Rachel' portrait"
+                />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">Making Things Better</h4>
+                <p class="speaker_detail__txt">
+                  Redefining the Technical Possibilities of CSS
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>03:00 pm</p>
+                  <p>R1</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Shirley Wu</h3>
-              <p>San Francisco, CA</p>
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Stephen Hay</h3>
+                  <p>Leeuwarden, NL</p>
+                </div>
+                <img
+                  src="images/orators/stephen@3x.jpg"
+                  alt="Stephen' portrait"
+                />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">Zero interface thinking</h4>
+                <p class="speaker_detail__txt">
+                  Everything we introduce has the potential to ruin everything.
+                  Ask: Is this absolutely necessary?
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>05:00 pm</p>
+                  <p>R1</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-            <div class="speaker__portrait">
-              <img
-                src="images/orators/shirley@3x.jpg"
-                alt="Shirley's portrait"
-              />
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Paul Irish</h3>
+                  <p>Palo Alto, CA</p>
+                </div>
+                <img src="images/orators/paul@3x.jpg" alt="Paul's portrait" />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">
+                  Developer Tooling, lighthouse
+                </h4>
+                <p class="speaker_detail__txt">
+                  Auditing, performance metrics, and best practices for
+                  Progressive Web Apps
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>10:30 am</p>
+                  <p>R2</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Luke Wroblewski</h3>
-              <p>San Francisco, CA</p>
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Nicole Sullivan</h3>
+                  <p>San Francisco, CA</p>
+                </div>
+                <img
+                  src="images/orators/nicole@3x.jpg"
+                  alt="Nicole's portrait"
+                />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">OOCSS code standards</h4>
+                <p class="speaker_detail__txt">
+                  Code conventions are important for the long-term
+                  maintainability of code
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>11:30 am</p>
+                  <p>R2</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/luke@3x.jpg" alt="Luke's portrait" />
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Nicolas Gallagher</h3>
-              <p>San Francisco, CA</p>
-            </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/nico@3x.jpg" alt="Nico's portrait" />
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Rachel Andrew</h3>
-              <p>Bristol, UK</p>
-            </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/rachel@3x.jpg" alt="Rachel's portrait" />
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Stephen Hay</h3>
-              <p>Leeuwarden, NL</p>
-            </div>
-            <div class="speaker__portrait">
-              <img
-                src="images/orators/stephen@3x.jpg"
-                alt="Stephen's portrait"
-              />
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Paul Irish</h3>
-              <p>Palo Alto, CA</p>
-            </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/paul@3x.jpg" alt="Paul's portrait" />
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Nicole Sullivan</h3>
-              <p>San Francisco, CA</p>
-            </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/nicole@3x.jpg" alt="Nicole's portrait" />
-            </div>
-          </div>
-          <div class="speaker">
-            <div class="speaker__content">
-              <h3>Brad Frost</h3>
-              <p>Pittsburgh, PA</p>
-            </div>
-            <div class="speaker__portrait">
-              <img src="images/orators/brad@3x.jpg" alt="Brad's portrait" />
+
+            <div class="speaker_main">
+              <div class="speaker_main__content">
+                <div>
+                  <h3 class="speaker_main__name">Brad Frost</h3>
+                  <p>Pittsburgh, PA</p>
+                </div>
+                <img src="images/orators/brad@3x.jpg" alt="Brad's portrait" />
+              </div>
+
+              <div class="speaker_detail">
+                <h4 class="speaker_detail__title">Atomic Design</h4>
+                <p class="speaker_detail__txt">
+                  We can construct design systems in a more methodical way
+                </p>
+                <div class="speaker_detail__footer">
+                  <p>02:00 pm</p>
+                  <p>R2</p>
+                  <button><a href="#">About</a></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
