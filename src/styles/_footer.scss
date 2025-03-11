@@ -8,7 +8,7 @@ footer {
   display: flex;
   justify-content: center;
   &__button {
-    background: var(--cta-color);
+    background: var(--cta1-color);
     color: white;
     border-radius: 90px;
     padding-inline: 2rem;
@@ -25,11 +25,17 @@ footer {
 
 .partners {
   // revoir en mobile : créer deux div ?
-  display: flex;
+  //display: flex;
   justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+  padding-block: 1rem;
   img {
     // casse le responsive parce que je dois mettre des vraies tailles à mes images
-    max-width: 10%;
+    max-width: 80%;
     fill: white;
   }
 }
@@ -38,6 +44,10 @@ footer {
   .localisation {
     display: flex;
     gap: 2rem;
+  }
+  .partners {
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
   }
 }
 

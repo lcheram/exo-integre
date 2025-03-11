@@ -270,7 +270,7 @@ footer {
   justify-content: center;
 }
 .tickets__button {
-  background: var(--cta-color);
+  background: var(--cta1-color);
   color: white;
   border-radius: 90px;
   padding-inline: 2rem;
@@ -285,11 +285,16 @@ footer {
 }
 
 .partners {
-  display: flex;
   justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+  padding-block: 1rem;
 }
 .partners img {
-  max-width: 10%;
+  max-width: 80%;
   fill: white;
 }
 
@@ -297,6 +302,10 @@ footer {
   .localisation {
     display: flex;
     gap: 2rem;
+  }
+  .partners {
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
   }
 }
 @media screen and (min-width: 600px) {
