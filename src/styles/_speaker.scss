@@ -9,6 +9,9 @@
     align-items: center;
     background: var(--bg-color);
   }
+  &__btn_hover {
+    display: none;
+  }
   & img {
     width: 20%;
     border-radius: 360px;
@@ -38,7 +41,7 @@
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .speakers_all {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47,6 +50,7 @@
   }
   .speaker_main {
     padding: 1rem;
+    position: relative;
     &__content {
       display: flex;
       flex-direction: column-reverse;
@@ -56,6 +60,18 @@
         border-radius: 0;
         width: 100%;
       }
+    }
+    &__btn_hover {
+      display: block;
+      border: none;
+      word-wrap: wrap;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      background: var(--cta1-color);
+      color: white;
+      position: absolute;
+      inset: 30% 40%; //ça marcherait si le bouton était dans la même div que l'image hu hu hu ... go changer la structure de ma carte speaker là
     }
   }
   .speaker_detail {

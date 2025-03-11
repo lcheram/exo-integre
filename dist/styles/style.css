@@ -100,7 +100,7 @@ form button {
   gap: 1rem;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .banner_content {
     align-items: center;
   }
@@ -202,6 +202,9 @@ form button {
   align-items: center;
   background: var(--bg-color);
 }
+.speaker_main__btn_hover {
+  display: none;
+}
 .speaker_main img {
   width: 20%;
   border-radius: 360px;
@@ -229,7 +232,7 @@ form button {
   align-self: end;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .speakers_all {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -238,6 +241,7 @@ form button {
   }
   .speaker_main {
     padding: 1rem;
+    position: relative;
   }
   .speaker_main__content {
     display: flex;
@@ -248,6 +252,18 @@ form button {
   .speaker_main__content img {
     border-radius: 0;
     width: 100%;
+  }
+  .speaker_main__btn_hover {
+    display: block;
+    border: none;
+    word-wrap: wrap;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    background: var(--cta1-color);
+    color: white;
+    position: absolute;
+    inset: 30% 40%;
   }
   .speaker_detail__footer button {
     align-self: center;
@@ -298,17 +314,19 @@ footer {
   fill: white;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 650px) {
   .localisation {
     display: flex;
     gap: 2rem;
+    align-items: end;
   }
   .partners {
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
     align-items: center;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
   .localisation__map {
     display: block;
   }
