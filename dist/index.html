@@ -447,7 +447,10 @@
               />
             </div>
             <div class="short-details">
-              <label for="details">Short details</label>
+              <label for="details"
+                >Short details <sup>[separate by comma]</sup></label
+              >
+              <!--sup c'est pas ouf, de toutes façons je bosse pas sur mes labels vu qu'ils sont pas bisibles à l'écran .. ou alors je remets les labels pour les 4 premiers champs et puis je laisse le placeholder pour le message short details ?-->
               <input
                 type="textarea"
                 id="details"
@@ -455,7 +458,9 @@
                 placeholder="Short details*"
               />
             </div>
-            <button type="submit" required>Send your Subject</button>
+            <button class="btn-form" type="submit" required>
+              Send your Subject
+            </button>
           </form>
           <p class="form_speaker__text bold_text">
             or just participate to the present event ...

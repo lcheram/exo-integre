@@ -22,23 +22,10 @@ ul {
   --main-color: rgb(99, 30, 239);
   --detail-color: #ffede5;
   --footer-color: #343237;
-  --cta-color: #ff0000;
+  --cta1-color: #ff0000;
+  --cta2-color: #ff6554;
 }
 
-/*.wrapper {
-  margin: 1rem;
-}*/
-/*.pattern {
-  display: flex;
-  justify-content: space-between;
-  max-width: 100%;
-  overflow: hidden;
-  & img {
-    max-width: 40%;
-    max-height: 40%;
-  }
-    // n'existe plus dans cette version : je vais mettre des pseudo éléments before et after
-}*/
 .banner_content {
   display: flex;
   flex-direction: column;
@@ -71,7 +58,7 @@ ul {
   gap: 1rem;
 }
 .form_speaker label {
-  font-size: 0;
+  font-size: 1px;
 }
 .form_speaker input {
   border: none;
@@ -80,11 +67,14 @@ ul {
   margin-block-end: 1rem;
   width: 100%;
 }
+.form_speaker input[textarea] {
+  border: 1px solid black;
+}
 
 form {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   gap: 1rem;
   width: 100%;
 }
@@ -92,6 +82,7 @@ form button {
   width: -moz-fit-content;
   width: fit-content;
   align-self: center;
+  justify-self: center;
 }
 
 .hero {
@@ -129,6 +120,9 @@ form button {
   }
   .short-details {
     grid-area: 3/1/-1/-1;
+  }
+  .btn-form {
+    grid-area: 4/1/-1/-1;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -286,10 +280,27 @@ footer {
   margin-block-start: -30px;
 }
 
+.localisation__map {
+  display: none;
+}
+
 .partners {
   display: flex;
   justify-content: space-between;
 }
 .partners img {
   max-width: 10%;
+  fill: white;
+}
+
+@media screen and (min-width: 600px) {
+  .localisation {
+    display: flex;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .localisation__map {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */

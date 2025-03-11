@@ -19,6 +19,10 @@ footer {
   }
 }
 
+.localisation__map {
+  display: none;
+}
+
 .partners {
   // revoir en mobile : créer deux div ?
   display: flex;
@@ -26,5 +30,19 @@ footer {
   img {
     // casse le responsive parce que je dois mettre des vraies tailles à mes images
     max-width: 10%;
+    fill: white;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .localisation {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .localisation__map {
+    display: block;
   }
 }
