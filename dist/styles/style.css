@@ -249,6 +249,10 @@ p {
   font-size: 3rem;
   text-transform: uppercase;
   color: var(--main-color);
+  text-align: center;
+}
+.form_speaker p {
+  text-align: center;
 }
 .form_speaker label {
   font-size: 1px;
@@ -276,6 +280,13 @@ form button {
   width: fit-content;
   align-self: center;
   justify-self: center;
+  color: var(--cta2-color);
+  background: white;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--cta2-color);
+  font-size: 1.5rem;
 }
 
 .hero {
@@ -400,18 +411,17 @@ form button {
 }
 .mobile_nav__icons {
   display: flex;
-  gap: 2rem;
   font-size: 1px;
 }
 .mobile_nav__icons--schedule::before {
   font-family: "codeconf" !important;
-  font-size: 2.5rem;
+  font-size: 2rem;
   content: "\e93f";
   color: var(--footer-color);
 }
 .mobile_nav__icons--menu::before {
   font-family: "codeconf" !important;
-  font-size: 2.5rem;
+  font-size: 2rem;
   content: "\e93e";
   color: var(--footer-color);
 }
@@ -571,6 +581,7 @@ form button {
     border-radius: 0;
     width: 100%;
     margin-block-start: 0;
+    background: linear-gradient(#00C4C6, #704FFA);
   }
   .speaker_main__portrait button {
     display: flex;

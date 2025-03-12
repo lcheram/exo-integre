@@ -13,17 +13,16 @@
   }
   &__icons {
     display: flex;
-    gap: 2rem;
     font-size: 1px;
-    &--schedule::before {
+    &--schedule::before { // mais c'est cliquable en élément before du li ? non hein, je devrais mettre dans le a, un bien dans un <i> élément icon // fontawesome lui-même dans le <a> et donc cliquable ???
       font-family: 'codeconf' !important;
-      font-size: 2.5rem;
+      font-size: 2rem;
       content: "\e93f";
       color: var(--footer-color);
     }
     &--menu::before {
       font-family: 'codeconf' !important;
-      font-size: 2.5rem;
+      font-size: 2rem;
       content: "\e93e";
       color: var(--footer-color);
     }
