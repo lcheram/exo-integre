@@ -1,9 +1,10 @@
 .mobile_nav {
   margin: 1rem;
+  margin-block-end: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid pink;
+  //border: 2px solid pink;
   h1 {
     font-size: 1px;
   }
@@ -33,7 +34,7 @@
   margin: 1rem;
   display: none;
   justify-content: space-between;
-  border: 2px solid pink;
+  //border: 2px solid pink;
   h1 {
     font-size: 0;
   }
@@ -43,7 +44,7 @@
   &__menu {
     display: flex;
     gap: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     align-items: center;
     &-list {
       display: flex;
@@ -57,7 +58,21 @@
     &-icons {
       display: flex;
       gap: 1rem;
-    }
+      &--schedule::before {
+        font-family: 'codeconf' !important;
+        font-size: 1.5rem;
+        content: "\e93f  ";
+        color: var(--footer-color);
+      }
+      &--search {
+        font-size: 1px;
+      &::before {
+        font-family: 'codeconf' !important;
+        font-size: 1.5rem;
+        content: "\e940";
+        color: var(--cta1-color);
+      }
+    }}
   }
 }
 

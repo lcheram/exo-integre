@@ -191,10 +191,10 @@ p {
 .banner::before {
   content: "";
   position: absolute;
-  height: 2rem;
-  width: 10rem;
+  height: 3rem;
+  width: 15rem;
   background: url("../images/elts/pattern-stripes-left.png");
-  background-size: 10rem;
+  background-size: 15rem 3rem;
   margin-block-start: -1rem;
 }
 
@@ -303,6 +303,12 @@ form button {
       }
     }
   }*/
+  .banner::before {
+    height: 4rem;
+    width: 20rem;
+    background-size: 20rem 4rem;
+    margin-block-start: -2rem;
+  }
   form {
     width: 90%;
     grid-template-columns: repeat(2, 1fr);
@@ -342,15 +348,15 @@ form button {
   .banner::before {
     height: 4rem;
     width: 20rem;
-    background-size: 20rem;
+    background-size: 20rem 4rem;
     margin-block-start: -2rem;
   }
   .banner_content {
     grid-template-columns: repeat(2, 1fr);
   }
   .banner_content__text {
-    margin-inline-end: 2rem;
-    align-items: end;
+    margin-inline-end: 6rem;
+    align-items: start;
     display: flex;
     flex-direction: column;
   }
@@ -360,17 +366,16 @@ form button {
   }
   .banner_content__text p {
     display: block;
-    direction: rtl;
     color: white;
     font-size: 2rem;
   }
 }
 .mobile_nav {
   margin: 1rem;
+  margin-block-end: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid pink;
 }
 .mobile_nav h1 {
   font-size: 1px;
@@ -400,7 +405,6 @@ form button {
   margin: 1rem;
   display: none;
   justify-content: space-between;
-  border: 2px solid pink;
 }
 .desktop_nav h1 {
   font-size: 0;
@@ -411,7 +415,7 @@ form button {
 .desktop_nav__menu {
   display: flex;
   gap: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   align-items: center;
 }
 .desktop_nav__menu-list {
@@ -424,6 +428,21 @@ form button {
 .desktop_nav__menu-icons {
   display: flex;
   gap: 1rem;
+}
+.desktop_nav__menu-icons--schedule::before {
+  font-family: "codeconf" !important;
+  font-size: 1.5rem;
+  content: "\e93f  ";
+  color: var(--footer-color);
+}
+.desktop_nav__menu-icons--search {
+  font-size: 1px;
+}
+.desktop_nav__menu-icons--search::before {
+  font-family: "codeconf" !important;
+  font-size: 1.5rem;
+  content: "\e940";
+  color: var(--cta1-color);
 }
 
 @media screen and (min-width: 1024px) {
