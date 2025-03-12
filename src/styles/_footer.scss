@@ -17,6 +17,11 @@ footer {
     border: none;
     margin-block-start: -30px; // revoir les unités de mesure
     text-transform: lowercase;
+    &::after {
+      font-family: 'codeconf' !important;
+      content: "  \e945  \e944";
+
+    }
   }
 }
 

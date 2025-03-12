@@ -49,6 +49,10 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .speaker_details {
   padding-block: 2rem;
   &__description {
@@ -57,12 +61,12 @@
   &__footer {
     display: flex;
     &_btn {
-      padding-inline: 1.5rem;
-      padding-block: 0.3rem; // ne fonctionne pas ?
+      padding: 1rem;
       background: var(--detail-color);
       border-radius: 50px;
       border: 1px solid var(--cta2-color);
       color: var(--cta2-color);
+
     }
   }
 }
@@ -87,9 +91,8 @@
       }
       button {
         display: flex;
-        //position: absolute;
-        //inset: 50%;
-        //border: 1px solid pink;
+        position: absolute;
+        inset: 60% 35%;
         border-radius: 360rem;
         background: var(--cta1-color);
         border: none;
@@ -104,6 +107,7 @@
     }
     &__infos {
       display: flex;
+      align-self: start;
       //padding-block-end: 2rem;
     }
   }

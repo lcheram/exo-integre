@@ -14,8 +14,8 @@ h2,
 h3,
 h4 {
   margin: 0;
-  font-family: "maven";
-  font-weight: 500; // ne fonctionne pas, gérer la font d'abord
+  font-family: "maven-v";
+  font-weight: 400; // ne fonctionne pas, gérer la font d'abord
 }
 
 img {
@@ -25,6 +25,7 @@ img {
 
 ul {
   list-style: none;
+  font-family: "museo";
 }
 
 a {
@@ -35,6 +36,7 @@ a {
 button {
   text-transform: uppercase;
   padding: 0;
+  font-family: "museo";
 }
 
 p {
