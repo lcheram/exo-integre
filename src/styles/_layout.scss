@@ -52,6 +52,11 @@
   padding-inline: 2rem;
   align-items: center;
   gap: 1rem;
+  h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+  }
   label {
     font-size: 1px;
   }
@@ -192,7 +197,7 @@ form {
     p {
     display: block;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 }}

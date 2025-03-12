@@ -18,6 +18,16 @@ h4 {
   font-weight: 400;
 }
 
+h2 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
 img {
   width: 100%;
   -o-object-fit: cover;
@@ -31,7 +41,7 @@ ul {
 
 a {
   text-decoration: none;
-  padding: 0;
+  padding: 1rem;
 }
 
 button {
@@ -235,6 +245,11 @@ p {
   align-items: center;
   gap: 1rem;
 }
+.form_speaker h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
 .form_speaker label {
   font-size: 1px;
 }
@@ -367,7 +382,7 @@ form button {
   .banner_content__text p {
     display: block;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 .mobile_nav {

@@ -18,6 +18,16 @@ h4 {
   font-weight: 400; // ne fonctionne pas, gérer la font d'abord
 }
 
+h2 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
 img {
   width: 100%;
   object-fit: cover;
@@ -30,7 +40,7 @@ ul {
 
 a {
   text-decoration: none;
-  padding: 0;
+  padding: 1rem;
 }
 
 button {
