@@ -1,6 +1,4 @@
-.speaker {
-  //background: deeppink;
-}
+
 .speaker_main {
   padding-inline: 2rem;
   display: grid;
@@ -43,6 +41,10 @@
     &_practical {
       display: flex;
       gap: 1rem;
+      &:before {
+        font-family: 'codeconf' !important;
+        content: "\e900"; // refaire icomoon, ne fonctionne pas horloge, mais ok si autre code 
+      }
     }
   }
 }
@@ -84,9 +86,20 @@
         object-fit: cover;
       }
       button {
-        display: block;
-        position: absolute;
-        inset: 50%;
+        display: flex;
+        //position: absolute;
+        //inset: 50%;
+        //border: 1px solid pink;
+        border-radius: 360rem;
+        background: var(--cta1-color);
+        border: none;
+        width: fit-content;
+        align-self: center;
+        color: white;
+        padding-inline: 3rem;
+        padding-block: 2rem;
+        max-width: 3rem;
+        justify-content: center;
       }
     }
     &__infos {

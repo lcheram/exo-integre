@@ -25,16 +25,16 @@ picture {
     position: absolute;
     height: 4rem;
     width: 7rem;
-    background: url("https://www.oppaca.com/hubfs/Imported_Blog_Media/158_cop2-1.jpg"); // ne fonctionne toujours pas, même avec une image web
-    background-size: 5rem;
+    background: url("../images/elts/pattern-stripes-left.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ? 
+    background-size: 10rem;
   }
 }
 
 .form_speaker {
-  // revoir ici si vmt ce sont les labels qui partent ou bien s'ils sont là sauf le textarea ?
+  // revoir ici si vmt ce sont les labels qui partent ou bien s'ils sont là sauf le textarea ? perso je trouve ça plus jolie quand les labels ne sont pas là
   display: flex;
   flex-direction: column;
-  margin-block-end: 5rem;
+  margin-block: 5rem;
   padding-inline: 2rem;
   align-items: center;
   gap: 1rem;
@@ -49,7 +49,7 @@ picture {
     width: 100%;
   }
   input[textarea] {
-    // ne fonctionne pas, je dois sûrement remettre mes labels pour les 4 premiers champs et bosser cet input seul ???
+    // ne fonctionne pas, je dois sûrement remettre mes labels pour les 4 premiers champs et bosser cet input seul ??? ou changer ordre commandes ? 
     border: 1px solid black;
   }
 }
@@ -83,6 +83,21 @@ form {
 .breadcrumb__list {
   display: flex;
   gap: 1rem;
+}
+
+.home {
+  font-size: 1px; //lisible accessibilité ? 
+  &::before {
+    font-family: 'codeconf' !important;
+    font-size: 1rem;
+    content: "\e943";
+    color: var(--cta1-color);
+  }
+  &::after { 
+    content: " ｜";
+    font-size: 1rem;
+    color: var(--cta1-color);
+  }
 }
 
 @media screen and (min-width: 650px) {

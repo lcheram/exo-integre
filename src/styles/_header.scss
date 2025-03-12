@@ -2,16 +2,30 @@
   margin: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 2px solid pink;
   h1 {
-    font-size: 0;
+    font-size: 1px;
   }
   img {
-    width: 6rem;
+    width: 10rem;
   }
   &__icons {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    font-size: 1px;
+    &--schedule::before {
+      font-family: 'codeconf' !important;
+      font-size: 2.5rem;
+      content: "\e93f";
+      color: var(--footer-color);
+    }
+    &--menu::before {
+      font-family: 'codeconf' !important;
+      font-size: 2.5rem;
+      content: "\e93e";
+      color: var(--footer-color);
+    }
   }
 }
 
@@ -30,6 +44,7 @@
     display: flex;
     gap: 1rem;
     font-size: 1.5rem;
+    align-items: center;
     &-list {
       display: flex;
       gap: 1rem;

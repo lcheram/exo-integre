@@ -14,6 +14,8 @@ h2,
 h3,
 h4 {
   margin: 0;
+  font-family: "maven";
+  font-weight: 500;
 }
 
 img {
@@ -36,6 +38,168 @@ button {
   padding: 0;
 }
 
+p {
+  font-family: "museo";
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "codeconf";
+  src: url("../fonts/codeconf/codeconf.woff?oat0m9") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-]:before,
+[class*=" icon-"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "codeconf" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hour:before {
+  content: "\e900";
+}
+
+.icon-pin:before {
+  content: "\e901";
+}
+
+.icon-burger:before {
+  content: "\e93e";
+}
+
+.icon-schedule:before {
+  content: "\e93f";
+}
+
+.icon-loop:before {
+  content: "\e940";
+}
+
+.icon-contact:before {
+  content: "\e941";
+}
+
+.icon-event:before {
+  content: "\e942";
+}
+
+.icon-home:before {
+  content: "\e943";
+}
+
+.icon-card:before {
+  content: "\e944";
+}
+
+.icon-paypal:before {
+  content: "\e945";
+}
+
+.icon-tw:before {
+  content: "\e946";
+}
+
+.icon-slack:before {
+  content: "\e947";
+}
+
+.icon-heart_full:before {
+  content: "\e948";
+}
+
+.icon-heart_line:before {
+  content: "\e949";
+}
+
+.icon-square_full:before {
+  content: "\e94a";
+}
+
+.icon-square_line:before {
+  content: "\e94b";
+}
+
+.icon-spade_full:before {
+  content: "\e94c";
+}
+
+.icon-spade_line:before {
+  content: "\e94d";
+}
+
+.icon-clover_full:before {
+  content: "\e94e";
+}
+
+.icon-clover_line:before {
+  content: "\e94f";
+}
+
+/* museo */
+@font-face {
+  font-family: "museo";
+  src: url("../fonts/museo/museo300.woff2") format("woff2"), url("../fonts/museo/museo300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "museo";
+  src: url("../fonts/museo/museo500.woff2") format("woff2"), url("../fonts/museo/museo500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "museo";
+  src: url("../fonts/museo/museo700.woff2") format("woff2"), url("../fonts/museo/museo700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "maven";
+  src: url("../fonts/maven/maven400.woff2") format("woff2"), url("../fonts/maven/maven400.woff") format("woff");
+  font-style: normal;
+}
+/* maven */
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven500.woff2") format("woff2"), url("maven/maven500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven600.woff2") format("woff2"), url("maven/maven600.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven700.woff2") format("woff2"), url("maven/maven700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven800.woff2") format("woff2"), url("maven/maven800.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven900.woff2") format("woff2"), url("maven/maven900.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
 :root {
   --bg-color: #f8f8f8;
   --main-color: rgb(99, 30, 239);
@@ -72,14 +236,14 @@ picture::before {
   position: absolute;
   height: 4rem;
   width: 7rem;
-  background: url("https://www.oppaca.com/hubfs/Imported_Blog_Media/158_cop2-1.jpg");
-  background-size: 5rem;
+  background: url("../images/elts/pattern-stripes-left.png");
+  background-size: 10rem;
 }
 
 .form_speaker {
   display: flex;
   flex-direction: column;
-  margin-block-end: 5rem;
+  margin-block: 5rem;
   padding-inline: 2rem;
   align-items: center;
   gap: 1rem;
@@ -125,6 +289,21 @@ form button {
 .breadcrumb__list {
   display: flex;
   gap: 1rem;
+}
+
+.home {
+  font-size: 1px;
+}
+.home::before {
+  font-family: "codeconf" !important;
+  font-size: 1rem;
+  content: "\e943";
+  color: var(--cta1-color);
+}
+.home::after {
+  content: " ｜";
+  font-size: 1rem;
+  color: var(--cta1-color);
 }
 
 @media screen and (min-width: 650px) {
@@ -175,17 +354,31 @@ form button {
   margin: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 2px solid pink;
 }
 .mobile_nav h1 {
-  font-size: 0;
+  font-size: 1px;
 }
 .mobile_nav img {
-  width: 6rem;
+  width: 10rem;
 }
 .mobile_nav__icons {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  font-size: 1px;
+}
+.mobile_nav__icons--schedule::before {
+  font-family: "codeconf" !important;
+  font-size: 2.5rem;
+  content: "\e93f";
+  color: var(--footer-color);
+}
+.mobile_nav__icons--menu::before {
+  font-family: "codeconf" !important;
+  font-size: 2.5rem;
+  content: "\e93e";
+  color: var(--footer-color);
 }
 
 .desktop_nav {
@@ -204,6 +397,7 @@ form button {
   display: flex;
   gap: 1rem;
   font-size: 1.5rem;
+  align-items: center;
 }
 .desktop_nav__menu-list {
   display: flex;
@@ -271,6 +465,10 @@ form button {
   display: flex;
   gap: 1rem;
 }
+.speaker_details__footer_practical:before {
+  font-family: "codeconf" !important;
+  content: "\e900";
+}
 
 .speaker_details {
   padding-block: 2rem;
@@ -312,9 +510,18 @@ form button {
        object-fit: cover;
   }
   .speaker_main__portrait button {
-    display: block;
-    position: absolute;
-    inset: 50%;
+    display: flex;
+    border-radius: 360rem;
+    background: var(--cta1-color);
+    border: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    align-self: center;
+    color: white;
+    padding-inline: 3rem;
+    padding-block: 2rem;
+    max-width: 3rem;
+    justify-content: center;
   }
   .speaker_main__infos {
     display: flex;
@@ -483,4 +690,4 @@ footer {
   .localisation__map {
     display: block;
   }
-}/*# sourceMappingURL=style.css.map */
+}
