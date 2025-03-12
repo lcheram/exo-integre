@@ -169,25 +169,59 @@ p {
 /* maven */
 @font-face {
   font-family: "maven-v";
-  src: url("../fonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format("ttf");
+  src: url("../fonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 :root {
   --bg-color: #f8f8f8;
-  --main-color: rgb(99, 30, 239);
+  --main-color: rgb(95, 23, 238);
   --detail-color: #ffede5;
   --footer-color: #343237;
   --cta1-color: #ff0000;
   --cta2-color: #ff6554;
+  --gradient-lin: linear-gradient(180deg, #6849FA 25%, #7D58FB 50%, #791BF8 100%);
+}
+
+.banner {
+  position: relative;
+  /*&::after { // ne fonctionne pas comme je veux : changer structure banner ?
+    content: "";
+    position: absolute;
+    height: 2rem; //changer
+    width: 10rem; //changer
+    background: url("../images/elts/pattern-stripes-right.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ? 
+    background-size: 10rem;
+    margin-block-start: -1rem;
+    align-self: start;
+    justify-self: start;
+  }*/
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  height: 2rem;
+  width: 10rem;
+  background: url("../images/elts/pattern-stripes-left.png");
+  background-size: 10rem;
+  margin-block-start: -1rem;
 }
 
 .banner_content {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   gap: 1rem;
-  background: var(--main-color);
+  min-height: 15rem;
+  background: var(--gradient-lin);
+  align-content: end;
+  align-items: center;
+  justify-items: end;
+}
+.banner_content picture {
+  width: 50%;
+  display: flex;
+  margin-block-start: -100px;
+  align-content: end;
 }
 .banner_content__text {
   color: white;
@@ -197,20 +231,6 @@ p {
 }
 .banner_content__text p {
   display: none;
-}
-
-picture {
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-picture::before {
-  content: "";
-  position: absolute;
-  height: 4rem;
-  width: 7rem;
-  background: url("../images/elts/pattern-stripes-left.png");
-  background-size: 10rem;
 }
 
 .form_speaker {
@@ -284,6 +304,9 @@ form button {
     align-items: center;
   }
   .banner_content picture {
+    width: 100%;
+  }
+  .banner_content picture img {
     width: 50%;
   }
   form {
@@ -517,7 +540,7 @@ form button {
     align-self: start;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .speakers_all {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

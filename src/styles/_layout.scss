@@ -1,11 +1,47 @@
+.banner {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2rem; //changer
+    width: 10rem; //changer
+    background: url("../images/elts/pattern-stripes-left.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ? 
+    background-size: 10rem;
+    margin-block-start: -1rem;
+  }
+  /*&::after { // ne fonctionne pas comme je veux : changer structure banner ?
+    content: "";
+    position: absolute;
+    height: 2rem; //changer
+    width: 10rem; //changer
+    background: url("../images/elts/pattern-stripes-right.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ? 
+    background-size: 10rem;
+    margin-block-start: -1rem;
+    align-self: start;
+    justify-self: start;
+  }*/
+}
+
 .banner_content {
   display: flex;
   flex-direction: column;
-  //margin-block-start: -5%;
-  overflow: hidden; // à changer quand j'aurai réglé le souci de l'image du présentateur
   gap: 1rem;
-  background: var(--main-color);
+  min-height: 15rem;
+  background: var(--gradient-lin);
+  align-content: end;
   //mettre un gradient linear ici
+  align-items: center;
+  justify-items: end;
+  picture {
+    width: 50%;
+    //position: relative;
+    display: flex;
+    margin-block-start: -100px;
+    //justify-content: flex-end;
+    //align-self: center;
+    align-content: end;
+  
+  }
   &__text {
     color: white;
     align-self: center;
@@ -15,20 +51,9 @@
       display: none;
     }
   }
+  
 }
-picture {
-  width: 100%;
-  position: relative;
-  display: flex;
-  &::before {
-    content: "";
-    position: absolute;
-    height: 4rem;
-    width: 7rem;
-    background: url("../images/elts/pattern-stripes-left.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ? 
-    background-size: 10rem;
-  }
-}
+
 
 .form_speaker {
   // revoir ici si vmt ce sont les labels qui partent ou bien s'ils sont là sauf le textarea ? perso je trouve ça plus jolie quand les labels ne sont pas là
@@ -104,7 +129,10 @@ form {
   .banner_content {
     align-items: center;
     picture {
-      width: 50%;
+      width: 100%;
+      img {
+        width: 50%;
+      }
     }
   }
   form {
