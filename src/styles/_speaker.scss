@@ -43,14 +43,11 @@
       gap: 1rem;
       &:before {
         font-family: 'codeconf' !important;
-        content: "\e900"; // refaire icomoon, ne fonctionne pas horloge, mais ok si autre code 
+        content: "\e900 ｜"; 
+        font-size: 1rem;// refaire icomoon, ne fonctionne pas horloge, mais ok si autre code 
       }
     }
   }
-}
-
-.hidden {
-  display: none;
 }
 
 .speaker_details {
@@ -71,6 +68,10 @@
   }
 }
 
+.hidden { // si je veux une transition : changer pour overflow hidden, et jouer sur les height
+  display: none;
+}
+
 @media screen and (min-width: 650px) {
   .speakers_all {
     display: grid;
@@ -84,10 +85,21 @@
     padding: 0;
     &__portrait {
       position: relative;
+      display: flex;
+      justify-content: end;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2rem;
+        width: 9rem;
+        background: url("../images/elts/pattern_stripes.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ? 
+        background-size: 10rem;
+        align-self: end;
+      }
       img {
         border-radius: 0;
         width: 100%;
-        object-fit: cover;
+        margin-block-start: 0;
       }
       button {
         display: flex;

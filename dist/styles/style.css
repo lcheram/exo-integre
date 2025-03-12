@@ -26,7 +26,7 @@ img {
 
 ul {
   list-style: none;
-  font-family: "museo";
+  font-family: "maven-v";
 }
 
 a {
@@ -440,11 +440,8 @@ form button {
 }
 .speaker_details__footer_practical:before {
   font-family: "codeconf" !important;
-  content: "\e900";
-}
-
-.hidden {
-  display: none;
+  content: "\e900｜";
+  font-size: 1rem;
 }
 
 .speaker_details {
@@ -464,6 +461,10 @@ form button {
   color: var(--cta2-color);
 }
 
+.hidden {
+  display: none;
+}
+
 @media screen and (min-width: 650px) {
   .speakers_all {
     display: grid;
@@ -478,12 +479,22 @@ form button {
   }
   .speaker_main__portrait {
     position: relative;
+    display: flex;
+    justify-content: end;
+  }
+  .speaker_main__portrait::after {
+    content: "";
+    position: absolute;
+    height: 2rem;
+    width: 9rem;
+    background: url("../images/elts/pattern_stripes.png");
+    background-size: 10rem;
+    align-self: end;
   }
   .speaker_main__portrait img {
     border-radius: 0;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    margin-block-start: 0;
   }
   .speaker_main__portrait button {
     display: flex;
