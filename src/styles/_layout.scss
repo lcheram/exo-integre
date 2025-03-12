@@ -1,58 +1,47 @@
 .banner {
   position: relative;
+  background: var(--gradient-lin);
+  margin-block-start: 2rem;
   &::before {
     content: "";
     position: absolute;
-    height: 2rem; //changer
-    width: 10rem; //changer
-    background: url("../images/elts/pattern-stripes-left.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ? 
+    height: 2rem; 
+    width: 10rem; 
+    background: url("../images/elts/pattern-stripes-left.png");
     background-size: 10rem;
     margin-block-start: -1rem;
   }
-  /*&::after { // ne fonctionne pas comme je veux : changer structure banner ?
-    content: "";
-    position: absolute;
-    height: 2rem; //changer
-    width: 10rem; //changer
-    background: url("../images/elts/pattern-stripes-right.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ? 
-    background-size: 10rem;
-    margin-block-start: -1rem;
-    align-self: start;
-    justify-self: start;
-  }*/
 }
 
 .banner_content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  min-height: 15rem;
-  background: var(--gradient-lin);
-  align-content: end;
-  //mettre un gradient linear ici
-  align-items: center;
-  justify-items: end;
+  display: grid;
   picture {
-    width: 50%;
-    //position: relative;
-    display: flex;
-    margin-block-start: -100px;
-    //justify-content: flex-end;
-    //align-self: center;
-    align-content: end;
-  
+  display: flex;
+  width: 100%;
+  margin-block-start: -80px;
+  justify-content: center;
+  img {
+    position: relative;
+    margin-inline: 2rem;
+    width: 70%;
+  }
   }
   &__text {
-    color: white;
-    align-self: center;
-    justify-self: center;
-    margin-block-start: -30%;
-    & p {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    h2 {
+      margin-block-start: -120px;
+      padding-inline: 1rem;
+      font-size: 3rem;
+      color: white;
+    }
+    p {
       display: none;
     }
   }
-  
 }
+
 
 
 .form_speaker {
@@ -126,7 +115,7 @@ form {
 }
 
 @media screen and (min-width: 650px) {
-  .banner_content {
+  /*.banner_content {
     align-items: center;
     picture {
       width: 100%;
@@ -134,7 +123,7 @@ form {
         width: 50%;
       }
     }
-  }
+  }*/
   form {
     width: 90%;
     grid-template-columns: repeat(2, 1fr);
@@ -159,7 +148,7 @@ form {
 }
 
 @media screen and (min-width: 1024px) {
-  .banner_content {
+  /*.banner_content {
     flex-direction: row;
     justify-content: center;
     picture {
@@ -171,5 +160,32 @@ form {
         display: block;
       }
     }
+  }*/
+  .banner {
+    &::before {
+      height: 4rem;
+      width: 20rem;
+      background-size: 20rem;
+      margin-block-start: -2rem;
+    }
+  }
+  .banner_content {
+    grid-template-columns: repeat(2, 1fr);
+    &__text {
+    margin-inline-end: 2rem;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-block-start: 0;
+      //align-self: center;
+      padding-inline: 0;
+    }
+    p {
+    display: block;
+    direction: rtl;
+    color: white;
+    font-size: 2rem;
   }
 }
+}}

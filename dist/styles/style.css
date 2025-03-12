@@ -185,17 +185,8 @@ p {
 
 .banner {
   position: relative;
-  /*&::after { // ne fonctionne pas comme je veux : changer structure banner ?
-    content: "";
-    position: absolute;
-    height: 2rem; //changer
-    width: 10rem; //changer
-    background: url("../images/elts/pattern-stripes-right.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ? 
-    background-size: 10rem;
-    margin-block-start: -1rem;
-    align-self: start;
-    justify-self: start;
-  }*/
+  background: var(--gradient-lin);
+  margin-block-start: 2rem;
 }
 .banner::before {
   content: "";
@@ -208,26 +199,29 @@ p {
 }
 
 .banner_content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  min-height: 15rem;
-  background: var(--gradient-lin);
-  align-content: end;
-  align-items: center;
-  justify-items: end;
+  display: grid;
 }
 .banner_content picture {
-  width: 50%;
   display: flex;
-  margin-block-start: -100px;
-  align-content: end;
+  width: 100%;
+  margin-block-start: -80px;
+  justify-content: center;
+}
+.banner_content picture img {
+  position: relative;
+  margin-inline: 2rem;
+  width: 70%;
 }
 .banner_content__text {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.banner_content__text h2 {
+  margin-block-start: -120px;
+  padding-inline: 1rem;
+  font-size: 3rem;
   color: white;
-  align-self: center;
-  justify-self: center;
-  margin-block-start: -30%;
 }
 .banner_content__text p {
   display: none;
@@ -300,15 +294,15 @@ form button {
 }
 
 @media screen and (min-width: 650px) {
-  .banner_content {
+  /*.banner_content {
     align-items: center;
-  }
-  .banner_content picture {
-    width: 100%;
-  }
-  .banner_content picture img {
-    width: 50%;
-  }
+    picture {
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+  }*/
   form {
     width: 90%;
     grid-template-columns: repeat(2, 1fr);
@@ -332,18 +326,43 @@ form button {
   }
 }
 @media screen and (min-width: 1024px) {
-  .banner_content {
+  /*.banner_content {
     flex-direction: row;
     justify-content: center;
+    picture {
+      width: 30%;
+    }
+    &__text {
+      margin-block-start: 0;
+      & p {
+        display: block;
+      }
+    }
+  }*/
+  .banner::before {
+    height: 4rem;
+    width: 20rem;
+    background-size: 20rem;
+    margin-block-start: -2rem;
   }
-  .banner_content picture {
-    width: 30%;
+  .banner_content {
+    grid-template-columns: repeat(2, 1fr);
   }
   .banner_content__text {
+    margin-inline-end: 2rem;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner_content__text h2 {
     margin-block-start: 0;
+    padding-inline: 0;
   }
   .banner_content__text p {
     display: block;
+    direction: rtl;
+    color: white;
+    font-size: 2rem;
   }
 }
 .mobile_nav {
