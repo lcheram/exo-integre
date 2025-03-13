@@ -6,5 +6,15 @@
   --footer-color: #343237;
   --cta1-color: #ff0000;
   --cta2-color: #ff6554;
-  --gradient-lin: linear-gradient(180deg, #6849FA 25%, #7D58FB 50%, #791BF8 100%);
+  --gradient-lin: linear-gradient(
+    180deg,
+    #6849fa 25%,
+    #7d58fb 50%,
+    #791bf8 100%
+  );
+  --speaker_title_color: rgb(48, 48, 112);
+  --second-title: rgb(28, 185, 175);
+  // size devices
+  --tablet: 650px;
+  --desktop: 1000px;
 }

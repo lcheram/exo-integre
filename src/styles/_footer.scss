@@ -6,20 +6,32 @@ footer {
 
 .tickets {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   &__button {
     background: var(--cta1-color);
+    font-family: "maven-v";
+    width: fit-content;
     color: white;
     border-radius: 90px;
     padding-inline: 2rem;
-    padding-block: 1rem;
+    padding-block: 1.5rem;
     font-size: 2rem;
     border: none;
     margin-block-start: -30px; // revoir les unités de mesure
     text-transform: lowercase;
+    box-shadow: 0 1px 13px 24px rgba(228, 65, 84, 0.15),
+      0 -1px 0 20px rgba(238, 231, 224, 0.07);
     &::after {
       font-family: "codeconf" !important;
       content: "  \e945  \e944";
+    }
+    &__price {
+      //mettre au-dessus visuellement du box shadow, but not today
+      align-self: center;
+      padding-block: 2rem; // n'a pas d'effet visuel
+      background: var(--footer-color);
     }
   }
 }
@@ -48,8 +60,40 @@ footer {
   }
 }
 
-.social__content {
-  display: flex;
+.social {
+  border-block: solid 1px white;
+  padding-block: 1rem;
+  &__content {
+    display: flex;
+    &__title {
+      // mauvais sélecteur
+      font-family: "museo";
+      color: rgb(111, 72, 5);
+    }
+    a {
+      font-family: "museo"; // ne marche pas
+      color: white;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+#geo-local {
+  border: 0.5px solid white;
+  padding-inline: 0.2rem;
+  padding-block: 0.5rem;
+  border-radius: 30px;
+  text-align: center;
+  margin-block: 1rem;
+  font-size: 0.8rem;
+  &::before {
+    font-family: "codeconf" !important;
+    content: "\e942  "; // pas le bon code, mais élément fonctionne
+  }
+}
+
+#geo-txt {
+  display: none;
 }
 
 @media screen and (min-width: 650px) {
@@ -63,10 +107,52 @@ footer {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
   }
+  #geo-txt {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1000px) {
-  .localisation__map {
-    display: block;
+  .localisation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__title {
+      color: var(--second-title);
+      font-size: 2rem;
+    }
+    &__map {
+      display: block;
+    }
+  }
+  .partners {
+    padding-block-start: 2rem;
+  }
+  .container_footer {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-block: 2rem;
+  }
+  .social {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 1rem;
+  }
+  .copyright {
+    a {
+      color: white;
+    }
+  }
+
+  #geo-local {
+    border: none;
+    text-align: start;
+    padding-inline: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    &::before {
+      content: "";
+    }
   }
 }

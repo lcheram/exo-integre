@@ -86,9 +86,9 @@
     width: 100%;
     font-size: 1.5rem;
   }
-  input[textarea] {
-    // ne fonctionne pas, je dois sûrement remettre mes labels pour les 4 premiers champs et bosser cet input seul ??? ou changer ordre commandes ?
+  #details {
     border: 1px solid black;
+    display: flex;
   }
 }
 
@@ -115,6 +115,10 @@ form {
   }
 }
 
+.btn-form {
+  margin-block: 2rem;
+}
+
 .bold_text {
   font-size: 2rem;
   line-height: 2.5rem;
@@ -123,7 +127,8 @@ form {
 .hero {
   background: var(--bg-color);
   margin-block: 0;
-  padding-block: 3rem;
+  padding-block-start: 3rem;
+  padding-block-end: 5rem;
 }
 
 .breadcrumb {
@@ -198,8 +203,8 @@ form {
   .btn-form {
     grid-area: 4/1/-1/-1;
     border-radius: 5rem;
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
+    padding-inline: 1.5rem; // en vrai je devrais variabiliser et calc
+    padding-block: 1rem;
     background: white;
   }
 }

@@ -22,6 +22,7 @@
             <ul class="mobile_nav__icons">
               <li class="mobile_nav__icons--schedule">
                 <a href="#">Schedule</a>
+                <!--le pseudo element ne sera pas cliquable car en dehors du a, et dans le li : REFAIRE NAV-->
               </li>
               <li class="mobile_nav__icons--menu"><a href="#">Menu</a></li>
             </ul>
@@ -112,11 +113,11 @@
                     src="images/orators/chris@3x.jpg"
                     alt="Chris' portrait"
                   />
-                  <a class="hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
+                  <a class="info hidden" href="#">More info</a>
+                  <!--attention, renvoie au sommet de la page, faudra désactiver le comportement par défaut du lien dans le js ?-->
                 </div>
               </div>
-              <div class="speaker_details">
+              <div class="speaker_details hidden">
                 <h3 class="speaker_details__name">Chris Coyier</h3>
                 <div class="speaker_details__description">
                   <h4 class="speaker_details__title">
@@ -146,11 +147,11 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <img src="images/orators/sara@3x.jpg" alt="Sara's portrait" />
-                  <a class="hidden" href="#">More info</a>
+                  <a class="info hidden" href="#">More info</a>
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
-              <div class="speaker_details">
+              <div class="speaker_details hidden">
                 <h3 class="speaker_details__name">Sara Soueidan</h3>
                 <div class="speaker_details__description">
                   <h4 class="speaker_details__title">Going Offline</h4>
@@ -182,7 +183,7 @@
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
-              <div class="speaker_details">
+              <div class="speaker_details hidden">
                 <h3 class="speaker_details__name">Eric Meyer</h3>
                 <div class="speaker_details__description">
                   <h4 class="speaker_details__title">Faux Grid Tracks</h4>
@@ -214,7 +215,7 @@
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
-              <div class="speaker_details">
+              <div class="speaker_details hidden">
                 <h3 class="speaker_details__name">Lea Verou</h3>
                 <div class="speaker_details__description">
                   <h4 class="speaker_details__title">Mavo</h4>
@@ -233,310 +234,131 @@
               </div>
             </div>
 
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Chris Coyier</h3>
-                  <p>Milwaukee, WI</p>
+            <div class="speaker">
+              <div class="speaker_main">
+                <div class="speaker_main__infos">
+                  <h3 class="speaker_main__infos-name">Shirley Wu</h3>
+                  <p class="speaker_main__infos-school">San Francisco, CA</p>
                 </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img src="images/orators/chris@3x.jpg" alt="Chris' portrait" />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">
-                  The All-Powerful Front-End Developer
-                </h4>
-                <p class="speaker_detail__txt">
-                  Without servers, we'd have no way to share our creations with
-                  the world
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>09:30 am</p>
-                  <p>R1</p>
-                  <button><a href="#">About</a></button>
+                <div class="speaker_main__portrait">
+                  <img src="images/orators/shirley@3x.jpg" alt="Shirley's portrait" />
+                  <a class="hidden" href="#">More info</a>
+                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
-            </div>
-
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Sara Soueidan</h3>
-                  <p>Lebanon</p>
+              <div class="speaker_details hidden">
+                <h3 class="speaker_details__name">Shirley Wu</h3>
+                <div class="speaker_details__description">
+                  <h4 class="speaker_details__title">655 Frustrations Doing Data Visualization</h4>
+                  <p class="speaker_details__text">
+                    Visualization teams spend more time visualizing than those on embedded teams
+                  </p>
                 </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img src="images/orators/sara@3x.jpg" alt="Sara's portrait" />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">Going Offline</h4>
-                <p class="speaker_detail__txt">
-                  You can re-visit my Web site even when you’re not connected to
-                  the Internet
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>10:15 am</p>
-                  <p>R1</p>
-                  <button><a href="#">About</a></button>
+                <div class="speaker_details__footer">
+                  <div class="speaker_details__footer_practical">
+                    <p>09:30 am</p>
+                    <p>R2</p>
+                  </div>
+                  <a class="speaker_details__footer_btn" href="#">About</a>
+                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
 
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Eric Meyer</h3>
-                  <p>Cleveland, OH</p>
+            <div class="speaker">
+              <div class="speaker_main">
+                <div class="speaker_main__infos">
+                  <h3 class="speaker_main__infos-name">Luke Wroblewski</h3>
+                  <p class="speaker_main__infos-school">San Francisco, CA</p>
                 </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img src="images/orators/eric@3x.jpg" alt="Eric's portrait" />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">Faux Grid Tracks</h4>
-                <p class="speaker_detail__txt">
-                  Is it possible to style the rows and columns of a [CSS]
-                  grid—the grid itself?
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>04:00 pm</p>
-                  <p>R1</p>
-                  <button><a href="#">About</a></button>
+                <div class="speaker_main__portrait">
+                  <img src="images/orators/luke@3x.jpg" alt="Luke's portrait" />
+                  <a class="hidden" href="#">More info</a>
+                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
-            </div>
-
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Lea Verou</h3>
-                  <p>Cambridge, MA</p>
+              <div class="speaker_details hidden">
+                <h3 class="speaker_details__name">Luke Wroblewski</h3>
+                <div class="speaker_details__description">
+                  <h4 class="speaker_details__title">The Way of the Web</h4>
+                  <p class="speaker_details__text">
+                    Science fiction is not about predicting the future, but about what we need to have a future</p>
                 </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img src="images/orators/lea@3x.jpg" alt="Lea's portrait" />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">Mavo</h4>
-                <p class="speaker_detail__txt">
-                  INew approachable way to create Web applications
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>04:00 pm</p>
-                  <p>R2</p>
-                  <button><a href="#">About</a></button>
+                <div class="speaker_details__footer">
+                  <div class="speaker_details__footer_practical">
+                    <p>11:30 am</p>
+                    <p>R1</p>
+                  </div>
+                  <a class="speaker_details__footer_btn" href="#">About</a>
+                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
 
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Shirley Wu</h3>
-                  <p>San Francisco, CA</p>
+            <div class="speaker">
+              <div class="speaker_main">
+                <div class="speaker_main__infos">
+                  <h3 class="speaker_main__infos-name">Nicolas Gallagher</h3>
+                  <p class="speaker_main__infos-school">San Francisco, CA</p>
                 </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img
-                  src="images/orators/shirley@3x.jpg"
-                  alt="Shirley's portrait"
-                />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">
-                  655 Frustrations Doing Data Visualization
-                </h4>
-                <p class="speaker_detail__txt">
-                  Visualization teams spend more time visualizing than those on
-                  embedded teams
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>09:30 am</p>
-                  <p>R2</p>
-                  <button><a href="#">About</a></button>
+                <div class="speaker_main__portrait">
+                  <img src="images/orators/nico@3x.jpg" alt="Nicolas' portrait" />
+                  <a class="hidden" href="#">More info</a>
+                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
-            </div>
-
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Luke Wroblewski</h3>
-                  <p>San Francisco, CA</p>
+              <div class="speaker_details hidden">
+                <h3 class="speaker_details__name">Nicolas Gallagher</h3>
+                <div class="speaker_details__description">
+                  <h4 class="speaker_details__title">Making SVG icon libraries for React apps</h4>
+                  <p class="speaker_details__text">
+                    Using SVG is currently the best way to create icon libraries for apps</p>
                 </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img src="images/orators/luke@3x.jpg" alt="Luke's portrait" />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">The Way of the Web</h4>
-                <p class="speaker_detail__txt">
-                  Science fiction is not about predicting the future, but about
-                  what we need to have a future
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>11:30 am</p>
-                  <p>R1</p>
-                  <button><a href="#">About</a></button>
+                <div class="speaker_details__footer">
+                  <div class="speaker_details__footer_practical">
+                    <p>02:00 pm</p>
+                    <p>R1</p>
+                  </div>
+                  <a class="speaker_details__footer_btn" href="#">About</a>
+                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
 
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Nicolas Gallagher</h3>
-                  <p>San Francisco, CA</p>
+            <div class="speaker">
+              <div class="speaker_main">
+                <div class="speaker_main__infos">
+                  <h3 class="speaker_main__infos-name">Rachel Andrew</h3>
+                  <p class="speaker_main__infos-school">Bristol, UK</p>
                 </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img src="images/orators/nico@3x.jpg" alt="Nicolas' portrait" />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">
-                  Making SVG icon libraries for React apps
-                </h4>
-                <p class="speaker_detail__txt">
-                  Using SVG is currently the best way to create icon libraries
-                  for apps
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>02:00 pm</p>
-                  <p>R1</p>
-                  <button><a href="#">About</a></button>
+                <div class="speaker_main__portrait">
+                  <img src="images/orators/rachel@3x.jpg" alt="Rachel's portrait" />
+                  <a class="hidden" href="#">More info</a>
+                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
-            </div>
-
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Rachel Andrew</h3>
-                  <p>Bristol, UK</p>
+              <div class="speaker_details hidden">
+                <h3 class="speaker_details__name">Rachel Andrew</h3>
+                <div class="speaker_details__description">
+                  <h4 class="speaker_details__title">Making Things Better</h4>
+                  <p class="speaker_details__text">
+                    Redefining the Technical Possibilities of CSS</p>
                 </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img
-                  src="images/orators/rachel@3x.jpg"
-                  alt="Rachel' portrait"
-                />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">Making Things Better</h4>
-                <p class="speaker_detail__txt">
-                  Redefining the Technical Possibilities of CSS
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>03:00 pm</p>
-                  <p>R1</p>
-                  <button><a href="#">About</a></button>
+                <div class="speaker_details__footer">
+                  <div class="speaker_details__footer_practical">
+                    <p>03:00 pm</p>
+                    <p>R1</p>
+                  </div>
+                  <a class="speaker_details__footer_btn" href="#">About</a>
+                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
 
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Stephen Hay</h3>
-                  <p>Leeuwarden, NL</p>
-                </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img
-                  src="images/orators/stephen@3x.jpg"
-                  alt="Stephen' portrait"
-                />
-              </div>
 
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">Zero interface thinking</h4>
-                <p class="speaker_detail__txt">
-                  Everything we introduce has the potential to ruin everything.
-                  Ask: Is this absolutely necessary?
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>05:00 pm</p>
-                  <p>R1</p>
-                  <button><a href="#">About</a></button>
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
 
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Paul Irish</h3>
-                  <p>Palo Alto, CA</p>
-                </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img src="images/orators/paul@3x.jpg" alt="Paul's portrait" />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">
-                  Developer Tooling, lighthouse
-                </h4>
-                <p class="speaker_detail__txt">
-                  Auditing, performance metrics, and best practices for
-                  Progressive Web Apps
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>10:30 am</p>
-                  <p>R2</p>
-                  <button><a href="#">About</a></button>
-                </div>
-              </div>
-            </div>
-
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Nicole Sullivan</h3>
-                  <p>San Francisco, CA</p>
-                </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img
-                  src="images/orators/nicole@3x.jpg"
-                  alt="Nicole's portrait"
-                />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">OOCSS code standards</h4>
-                <p class="speaker_detail__txt">
-                  Code conventions are important for the long-term
-                  maintainability of code
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>11:30 am</p>
-                  <p>R2</p>
-                  <button><a href="#">About</a></button>
-                </div>
-              </div>
-            </div>
-
-            <div class="speaker_main">
-              <div class="speaker_main__content">
-                <div>
-                  <h3 class="speaker_main__name">Brad Frost</h3>
-                  <p>Pittsburgh, PA</p>
-                </div>
-                <button class="speaker_main__btn_hover">More info</button>
-                <img src="images/orators/brad@3x.jpg" alt="Brad's portrait" />
-              </div>
-
-              <div class="speaker_detail">
-                <h4 class="speaker_detail__title">Atomic Design</h4>
-                <p class="speaker_detail__txt">
-                  We can construct design systems in a more methodical way
-                </p>
-                <div class="speaker_detail__footer">
-                  <p>02:00 pm</p>
-                  <p>R2</p>
-                  <button><a href="#">About</a></button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -598,6 +420,7 @@
               <!--sup c'est pas ouf, de toutes façons je bosse pas sur mes labels vu qu'ils sont pas bisibles à l'écran .. ou alors je remets les labels pour les 4 premiers champs et puis je laisse le placeholder pour le message short details ?-->
               <input
                 type="textarea"
+                rows="10"
                 id="details"
                 required
                 placeholder="Short details*"
@@ -615,15 +438,16 @@
 
       <footer>
         <div class="tickets">
-          <button class="tickets__button">get ticket</button>
+          <a href="#" class="tickets__button">get ticket</a>
           <!--rajout icone paypal et carte banque en css pseudo-element after-->
+          <p class="tickets__price">$199 USD</p>
         </div>
         <div class="localisation">
           <div class="localisation__text">
-            <h3>The Las Vegas Convention Center</h3>
-            <span><p>3150 Paradise Rd., Las Vegas, NV 89109</p></span>
+            <h3 class="localisation__title">The Las Vegas Convention Center</h3>
+            <p id="geo-local">3150 Paradise Rd., Las Vegas, NV 89109</p>
             <!--span = changer le style ou bien mettre une classe/id ?-->
-            <p>
+            <p id="geo-txt">
               The Las Vegas Convention Center (LVCC), located adjacent to the
               Las Vegas Strip, encompasses approximately 3.2 million square feet
               with exhibit space of 2 million square feet and meeting space of
@@ -674,27 +498,34 @@
               alt="mailchimp logo"
           /></a>
         </div>
-        <div class="social">
-          <h3 class="social__title">Follow us</h3>
-          <div class="social__content">
-            <div class="social__twitter">
-              <img src="" alt="logo twitter" />
-              <a href="#">twitter: @codeconf2023</a>
-            </div>
-            <div class="social__slack">
-              <img src="" alt="logo slack" />
-              <a href="#">slack channel: #codeconf2023 </a>
+        <div class="container_footer">
+          <div class="social">
+            <h3 class="social__title">Follow us</h3>
+            <div class="social__content">
+              <div class="social__twitter">
+                <a href="#"
+                  ><img src="" alt="logo twitter" />
+                  <!--element before en fait :   content: "\e946";
+et revoir la structure de l'élément + structure du footer-->
+                  twitter: @codeconf2023</a
+                >
+              </div>
+              <div class="social__slack">
+                <a href="#"
+                  ><img src="" alt="logo slack" /> slack channel: #codeconf2023
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="contact">
-          <h3 class="contact__title">Helpdesk Call-center</h3>
-          <p>+ 702-892-0711</p>
-          <p>(speaker's support)</p>
-        </div>
-        <div class="copyright">
-          <p>organised by <a href="#">WebeesMeetups.com</a></p>
-          <p>Copyright 2022</p>
+          <div class="contact">
+            <h3 class="contact__title">Helpdesk Call-center</h3>
+            <p>+ 702-892-0711</p>
+            <p>(speaker's support)</p>
+          </div>
+          <div class="copyright">
+            <p>organised by <a href="#">WebeesMeetups.com</a></p>
+            <p>Copyright 2022</p>
+          </div>
         </div>
       </footer>
     </div>

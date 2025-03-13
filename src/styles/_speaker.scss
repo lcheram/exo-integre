@@ -9,10 +9,13 @@
     flex-direction: column;
     &-name {
       font-size: 1.5rem;
+      color: var(--speaker_title_color); // faire une var color title
     }
     &-school {
       font-size: 1.3rem;
       margin-block-end: 1rem;
+      color: grey;
+      font-family: "maven-v";
     }
   }
   &__portrait {
@@ -35,12 +38,16 @@
   padding-block: 1rem;
   background: var(--detail-color);
   padding-inline: 2rem;
+  &__name {
+    color: var(--speaker_title_color);
+  }
   &__description {
     display: flex;
     flex-direction: column;
     p {
       font-size: 1rem;
       padding-block-end: 1rem;
+      font-family: "maven-v"; // ne fonctionne pas, voir reset et puissance des sélecteurs : refaire hiérarchie
     }
   }
   &__footer {
@@ -113,7 +120,7 @@
         }
       }
       a {
-        display: none; // display none, puis element listener sur main ou image --> ajout classe active on event hover; display flex;
+        display: none; // display none, puis element listener sur main ou image --> ajout classe active on event hover; display flex, ou bien juste opacity en vrai on s'en fou;
         position: absolute;
         inset: 60% 35%;
         border-radius: 360rem;
@@ -138,11 +145,18 @@
   }
   .speaker_details {
     padding-inline: 0.7rem;
-    p {
+    &__name {
+      padding-block-end: 2rem;
+    }
+    &__description {
+      padding-block-end: 2rem;
+    }
+    &__text {
       font-size: 1rem;
+      font-family: "maven-v";
     }
     &__footer {
-      p {
+      &_practical {
         font-size: 0.8rem;
       }
       a {
@@ -162,99 +176,3 @@
     padding-inline: 2rem;
   }
 }
-
-/*.speaker_main {
-  //border: 1px solid green;
-  //background: var(--bg-color);
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 1rem;
-    padding-block-end: 2rem;
-    align-items: center;
-    background: var(--bg-color);
-  }
-  &__btn_hover {
-    display: none;
-    border: none;
-    word-wrap: wrap;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100%;
-    background: var(--cta1-color);
-    color: white;
-    position: absolute;
-    inset: 50%; //ça marcherait si le bouton était dans la même div que l'image hu hu hu ... go changer la structure de ma carte speaker là
-  }
-  &__img {
-    // n'existe plus pour le moment, je dois refaire ma structure (mercredi, ajd je fatigue trop je n'arrive plus à me concentrer
-    position: relative;
-  }
-  & img {
-    width: 20%;
-    border-radius: 360px;
-  }
-}
-
-.speaker_detail {
-  //onclick display flex ? ou jouer avec la hauteur et les overflow hidden pour mettre des transitions ?
-  display: none;
-  //display: flex;
-  flex-direction: column;
-  background: var(--detail-color);
-  padding-inline: 1rem;
-  padding-block-end: 2rem;
-  &__footer {
-    display: flex;
-    justify-content: space-between;
-    button {
-      height: fit-content;
-      padding-block: 0.5rem;
-      padding-inline: 1rem;
-      align-self: end;
-    }
-  }
-}
-
-@media screen and (min-width: 650px) {
-  .speakers_all {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding-inline: 2rem;
-  }
-  .speaker_main {
-    padding: 1rem;
-    position: relative;
-    &__content {
-      display: flex;
-      flex-direction: column-reverse;
-      padding-block: 0;
-      padding-inline: 0;
-      & img {
-        border-radius: 0;
-        width: 100%;
-      }
-    }
-    .speaker_main__content:hover {
-      .speaker_main__btn_hover {
-        display: block;
-      }
-    }
-  }
-  .speaker_detail {
-    &__footer {
-      button {
-        align-self: center;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .speakers_all {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-// media query : reverse column dans le container lui-même et grid template change sur le parent pour 4 columns*/

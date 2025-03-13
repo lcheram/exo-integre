@@ -24,8 +24,8 @@ h2 {
 }
 
 h3 {
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-family: "museo";
+  font-size: 1.8rem;
   padding-block-end: 1rem;
 }
 
@@ -201,7 +201,16 @@ p {
   --footer-color: #343237;
   --cta1-color: #ff0000;
   --cta2-color: #ff6554;
-  --gradient-lin: linear-gradient(180deg, #6849FA 25%, #7D58FB 50%, #791BF8 100%);
+  --gradient-lin: linear-gradient(
+    180deg,
+    #6849fa 25%,
+    #7d58fb 50%,
+    #791bf8 100%
+  );
+  --speaker_title_color: rgb(48, 48, 112);
+  --second-title: rgb(28, 185, 175);
+  --tablet: 650px;
+  --desktop: 1000px;
 }
 
 .banner {
@@ -292,8 +301,9 @@ p {
   width: 100%;
   font-size: 1.5rem;
 }
-.form_speaker input[textarea] {
+.form_speaker #details {
   border: 1px solid black;
+  display: flex;
 }
 
 form {
@@ -317,6 +327,10 @@ form button {
   font-size: 1.5rem;
 }
 
+.btn-form {
+  margin-block: 2rem;
+}
+
 .bold_text {
   font-size: 2rem;
   line-height: 2.5rem;
@@ -325,7 +339,8 @@ form button {
 .hero {
   background: var(--bg-color);
   margin-block: 0;
-  padding-block: 3rem;
+  padding-block-start: 3rem;
+  padding-block-end: 5rem;
 }
 
 .breadcrumb {
@@ -394,8 +409,8 @@ form button {
   .btn-form {
     grid-area: 4/1/-1/-1;
     border-radius: 5rem;
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
     background: white;
   }
 }
@@ -527,10 +542,13 @@ form button {
 }
 .speaker_main__infos-name {
   font-size: 1.5rem;
+  color: var(--speaker_title_color);
 }
 .speaker_main__infos-school {
   font-size: 1.3rem;
   margin-block-end: 1rem;
+  color: grey;
+  font-family: "maven-v";
 }
 .speaker_main__portrait {
   display: flex;
@@ -551,6 +569,9 @@ form button {
   background: var(--detail-color);
   padding-inline: 2rem;
 }
+.speaker_details__name {
+  color: var(--speaker_title_color);
+}
 .speaker_details__description {
   display: flex;
   flex-direction: column;
@@ -558,6 +579,7 @@ form button {
 .speaker_details__description p {
   font-size: 1rem;
   padding-block-end: 1rem;
+  font-family: "maven-v";
 }
 .speaker_details__footer {
   display: flex;
@@ -650,10 +672,17 @@ form button {
   .speaker_details {
     padding-inline: 0.7rem;
   }
-  .speaker_details p {
-    font-size: 1rem;
+  .speaker_details__name {
+    padding-block-end: 2rem;
   }
-  .speaker_details__footer p {
+  .speaker_details__description {
+    padding-block-end: 2rem;
+  }
+  .speaker_details__text {
+    font-size: 1rem;
+    font-family: "maven-v";
+  }
+  .speaker_details__footer_practical {
     font-size: 0.8rem;
   }
   .speaker_details__footer a {
@@ -670,101 +699,6 @@ form button {
     padding-inline: 2rem;
   }
 }
-/*.speaker_main {
-  //border: 1px solid green;
-  //background: var(--bg-color);
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 1rem;
-    padding-block-end: 2rem;
-    align-items: center;
-    background: var(--bg-color);
-  }
-  &__btn_hover {
-    display: none;
-    border: none;
-    word-wrap: wrap;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100%;
-    background: var(--cta1-color);
-    color: white;
-    position: absolute;
-    inset: 50%; //ça marcherait si le bouton était dans la même div que l'image hu hu hu ... go changer la structure de ma carte speaker là
-  }
-  &__img {
-    // n'existe plus pour le moment, je dois refaire ma structure (mercredi, ajd je fatigue trop je n'arrive plus à me concentrer
-    position: relative;
-  }
-  & img {
-    width: 20%;
-    border-radius: 360px;
-  }
-}
-
-.speaker_detail {
-  //onclick display flex ? ou jouer avec la hauteur et les overflow hidden pour mettre des transitions ?
-  display: none;
-  //display: flex;
-  flex-direction: column;
-  background: var(--detail-color);
-  padding-inline: 1rem;
-  padding-block-end: 2rem;
-  &__footer {
-    display: flex;
-    justify-content: space-between;
-    button {
-      height: fit-content;
-      padding-block: 0.5rem;
-      padding-inline: 1rem;
-      align-self: end;
-    }
-  }
-}
-
-@media screen and (min-width: 650px) {
-  .speakers_all {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding-inline: 2rem;
-  }
-  .speaker_main {
-    padding: 1rem;
-    position: relative;
-    &__content {
-      display: flex;
-      flex-direction: column-reverse;
-      padding-block: 0;
-      padding-inline: 0;
-      & img {
-        border-radius: 0;
-        width: 100%;
-      }
-    }
-    .speaker_main__content:hover {
-      .speaker_main__btn_hover {
-        display: block;
-      }
-    }
-  }
-  .speaker_detail {
-    &__footer {
-      button {
-        align-self: center;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .speakers_all {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-// media query : reverse column dans le container lui-même et grid template change sur le parent pour 4 columns*/
 footer {
   background: var(--footer-color);
   color: white;
@@ -773,22 +707,33 @@ footer {
 
 .tickets {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 .tickets__button {
   background: var(--cta1-color);
+  font-family: "maven-v";
+  width: -moz-fit-content;
+  width: fit-content;
   color: white;
   border-radius: 90px;
   padding-inline: 2rem;
-  padding-block: 1rem;
+  padding-block: 1.5rem;
   font-size: 2rem;
   border: none;
   margin-block-start: -30px;
   text-transform: lowercase;
+  box-shadow: 0 1px 13px 24px rgba(228, 65, 84, 0.15), 0 -1px 0 20px rgba(238, 231, 224, 0.07);
 }
 .tickets__button::after {
   font-family: "codeconf" !important;
   content: "  \e945  \e944";
+}
+.tickets__button__price {
+  align-self: center;
+  padding-block: 2rem;
+  background: var(--footer-color);
 }
 
 .localisation {
@@ -812,8 +757,39 @@ footer {
   fill: white;
 }
 
+.social {
+  border-block: solid 1px white;
+  padding-block: 1rem;
+}
 .social__content {
   display: flex;
+}
+.social__content__title {
+  font-family: "museo";
+  color: rgb(111, 72, 5);
+}
+.social__content a {
+  font-family: "museo";
+  color: white;
+  font-size: 1.3rem;
+}
+
+#geo-local {
+  border: 0.5px solid white;
+  padding-inline: 0.2rem;
+  padding-block: 0.5rem;
+  border-radius: 30px;
+  text-align: center;
+  margin-block: 1rem;
+  font-size: 0.8rem;
+}
+#geo-local::before {
+  font-family: "codeconf" !important;
+  content: "\e942  ";
+}
+
+#geo-txt {
+  display: none;
 }
 
 @media screen and (min-width: 650px) {
@@ -826,9 +802,48 @@ footer {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
   }
+  #geo-txt {
+    display: block;
+  }
 }
 @media screen and (min-width: 1000px) {
+  .localisation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .localisation__title {
+    color: var(--second-title);
+    font-size: 2rem;
+  }
   .localisation__map {
     display: block;
+  }
+  .partners {
+    padding-block-start: 2rem;
+  }
+  .container_footer {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding-block: 2rem;
+  }
+  .social {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 1rem;
+  }
+  .copyright a {
+    color: white;
+  }
+  #geo-local {
+    border: none;
+    text-align: start;
+    padding-inline: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  #geo-local::before {
+    content: "";
   }
 }/*# sourceMappingURL=style.css.map */
