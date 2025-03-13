@@ -431,7 +431,11 @@ form button {
   .banner_content {
     grid-template-columns: repeat(2, 1fr);
   }
+  .banner_content picture {
+    margin-inline-start: 3rem;
+  }
   .banner_content__text {
+    margin-inline-start: -3rem;
     margin-inline-end: 8rem;
     align-items: start;
     display: flex;
@@ -445,6 +449,10 @@ form button {
     display: block;
     color: white;
     font-size: 1.5rem;
+  }
+  .form_speaker__text {
+    max-width: 80%;
+    padding-block: 1rem;
   }
 }
 .mobile_nav {
@@ -564,6 +572,11 @@ form button {
   display: none;
 }
 
+.gradient {
+  display: flex;
+  justify-content: end;
+}
+
 .speaker_details {
   padding-block: 1rem;
   background: var(--detail-color);
@@ -637,12 +650,25 @@ form button {
     background: url("../images/elts/pattern_stripes.png");
     background-size: 10rem;
     align-self: end;
+    z-index: 3;
+  }
+  .speaker_main__portrait .gradient::before {
+    content: "";
+    position: absolute;
+    background: var(--gradient-lin);
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 94%;
+    background-size: 100%;
+    mix-blend-mode: multiply;
+    opacity: 50%;
   }
   .speaker_main__portrait img {
     border-radius: 0;
     width: 100%;
     margin-block-start: 0;
-    background: linear-gradient(#00c4c6, #704ffa);
+    position: relative;
   }
   .speaker_main__portrait:hover a {
     display: flex;
@@ -781,7 +807,7 @@ footer {
   border-radius: 30px;
   text-align: center;
   margin-block: 1rem;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
 }
 #geo-local::before {
   font-family: "codeconf" !important;

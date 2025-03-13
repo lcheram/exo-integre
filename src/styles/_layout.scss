@@ -226,7 +226,11 @@ form {
 
   .banner_content {
     grid-template-columns: repeat(2, 1fr);
+    picture {
+      margin-inline-start: 3rem;
+    }
     &__text {
+      margin-inline-start: -3rem;
       margin-inline-end: 8rem;
       align-items: start;
       display: flex;
@@ -242,5 +246,9 @@ form {
         font-size: 1.5rem;
       }
     }
+  }
+  .form_speaker__text {
+    max-width: 80%;
+    padding-block: 1rem;
   }
 }
