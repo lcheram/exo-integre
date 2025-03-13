@@ -104,6 +104,9 @@
     display: flex;
     flex-direction: column-reverse;
     padding: 0;
+    &__infos-name {
+      padding-block-end: 0.5rem;
+    }
     &__portrait {
       position: relative;
       display: flex;
@@ -124,14 +127,14 @@
           // ne fonctionne pas bonjouuuuuur
           content: "";
           position: absolute;
-          background: var(--gradient-lin);
+          background: var(--gradient-lin2);
           inset: 0;
           z-index: 2;
           width: 100%;
           height: 94%;
           background-size: 100%;
-          mix-blend-mode: multiply;
-          opacity: 50%;
+          mix-blend-mode: hard-light;
+          opacity: 30%;
         } // changer valeur dégradé + rajout div autour de l'image uniquement dans élément speaker_main_portrait. Attention, ça change la disposition de mon image en mobile
       }
       img {
@@ -161,6 +164,7 @@
         justify-content: center;
         font-family: "museo";
         text-align: center;
+        z-index: 20;
       }
     }
     &__infos {

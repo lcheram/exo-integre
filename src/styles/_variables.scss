@@ -1,7 +1,7 @@
 :root {
   //pas les bonnes valeurs mais comme ça elles sont set
   --bg-color: #f8f8f8;
-  --main-color: rgb(95, 23, 238);
+  --main-color: #5f17ee;
   --detail-color: #ffede5;
   --footer-color: #343237;
   --cta1-color: #ff0000;
@@ -12,8 +12,9 @@
     #7d58fb 50%,
     #791bf8 100%
   );
+  --gradient-lin2: linear-gradient(320deg, #1cb9af 0%, #1f05b4 75%);
   --speaker_title_color: rgb(48, 48, 112);
-  --second-title: rgb(28, 185, 175);
+  --second-title: #1cb9af;
   // size devices
   --tablet: 650px;
   --desktop: 1000px;
