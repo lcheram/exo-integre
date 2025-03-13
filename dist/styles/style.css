@@ -19,12 +19,12 @@ h4 {
 }
 
 h2 {
-  font-weight: 900;
+  font-weight: 600;
   font-size: 2rem;
 }
 
 h3 {
-  font-weight: 900;
+  font-weight: 600;
   font-size: 1.5rem;
   padding-block-end: 1rem;
 }
@@ -32,7 +32,7 @@ h3 {
 h4 {
   line-height: 1.5rem;
   font-size: 1.3rem;
-  font-weight: 900;
+  font-weight: 500;
   padding-block-end: 1rem;
 }
 
@@ -63,7 +63,7 @@ p {
   font-family: "museo";
   font-weight: 300;
   font-size: 1.3rem;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
   margin-block: 0;
 }
 
@@ -193,7 +193,6 @@ p {
   font-family: "maven-v";
   src: url("../fonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format("truetype");
   font-style: normal;
-  font-weight: 400;
 }
 :root {
   --bg-color: #f8f8f8;
@@ -213,11 +212,22 @@ p {
 .banner::before {
   content: "";
   position: absolute;
-  height: 3rem;
-  width: 15rem;
+  height: 2rem;
+  width: 10rem;
   background: url("../images/elts/pattern-stripes-left.png");
-  background-size: 15rem 3rem;
+  background-size: 10rem 2rem;
   margin-block-start: -1rem;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  height: 2rem;
+  width: 15rem;
+  background: url("../images/elts/pattern-stripes-right.png");
+  background-size: 15rem 2rem;
+  margin-block-start: -1rem;
+  inset-inline: auto 0;
+  inset-block: 0 auto;
 }
 
 .banner_content {
@@ -233,6 +243,7 @@ p {
   position: relative;
   margin-inline: 2rem;
   width: 70%;
+  z-index: 10;
 }
 .banner_content__text {
   display: flex;
@@ -244,6 +255,7 @@ p {
   padding-inline: 1rem;
   font-size: 3rem;
   color: white;
+  z-index: 11;
 }
 .banner_content__text p {
   display: none;
@@ -259,10 +271,12 @@ p {
   gap: 1rem;
 }
 .form_speaker h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--main-color);
   text-align: center;
+  padding-block: 2rem;
 }
 .form_speaker p {
   text-align: center;
@@ -301,6 +315,11 @@ form button {
   border-radius: 50px;
   border: 1.5px solid var(--cta2-color);
   font-size: 1.5rem;
+}
+
+.bold_text {
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 .hero {
@@ -344,10 +363,16 @@ form button {
     }
   }*/
   .banner::before {
-    height: 4rem;
-    width: 20rem;
-    background-size: 20rem 4rem;
-    margin-block-start: -2rem;
+    height: 3rem;
+    width: 17rem;
+    background-size: 17rem 3rem;
+    margin-block-start: -1.5rem;
+  }
+  .banner::after {
+    height: 3rem;
+    width: 25rem;
+    background-size: 25rem 3rem;
+    margin-block-start: -1.5rem;
   }
   .banner_content picture img {
     max-width: 50%;
@@ -388,17 +413,11 @@ form button {
       }
     }
   }*/
-  .banner::before {
-    height: 4rem;
-    width: 20rem;
-    background-size: 20rem 4rem;
-    margin-block-start: -2rem;
-  }
   .banner_content {
     grid-template-columns: repeat(2, 1fr);
   }
   .banner_content__text {
-    margin-inline-end: 6rem;
+    margin-inline-end: 8rem;
     align-items: start;
     display: flex;
     flex-direction: column;
@@ -523,12 +542,12 @@ form button {
   border-radius: 100%;
   margin-block: 1rem;
 }
-.speaker_main__portrait button {
+.speaker_main__portrait a {
   display: none;
 }
 
 .speaker_details {
-  padding-block: 2rem;
+  padding-block: 1rem;
   background: var(--detail-color);
   padding-inline: 2rem;
 }
@@ -603,8 +622,11 @@ form button {
     margin-block-start: 0;
     background: linear-gradient(#00c4c6, #704ffa);
   }
-  .speaker_main__portrait button {
+  .speaker_main__portrait:hover a {
     display: flex;
+  }
+  .speaker_main__portrait a {
+    display: none;
     position: absolute;
     inset: 60% 35%;
     border-radius: 360rem;
@@ -618,6 +640,8 @@ form button {
     padding-block: 2rem;
     max-width: 3rem;
     justify-content: center;
+    font-family: "museo";
+    text-align: center;
   }
   .speaker_main__infos {
     display: flex;
@@ -801,7 +825,6 @@ footer {
   .partners {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
-    align-items: center;
   }
 }
 @media screen and (min-width: 1000px) {

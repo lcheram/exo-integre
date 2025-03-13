@@ -24,7 +24,7 @@
       border-radius: 100%;
       margin-block: 1rem;
     }
-    button {
+    a {
       display: none;
     }
   }
@@ -32,7 +32,7 @@
 
 .speaker_details {
   //display: none;
-  padding-block: 2rem;
+  padding-block: 1rem;
   background: var(--detail-color);
   padding-inline: 2rem;
   &__description {
@@ -107,8 +107,13 @@
         margin-block-start: 0;
         background: linear-gradient(#00c4c6, #704ffa);
       }
-      button {
-        display: flex; // display none, puis element listener sur main ou image --> ajout classe active on event hover; display flex;
+      &:hover {
+        a {
+          display: flex;
+        }
+      }
+      a {
+        display: none; // display none, puis element listener sur main ou image --> ajout classe active on event hover; display flex;
         position: absolute;
         inset: 60% 35%;
         border-radius: 360rem;
@@ -121,6 +126,8 @@
         padding-block: 2rem;
         max-width: 3rem;
         justify-content: center;
+        font-family: "museo";
+        text-align: center;
       }
     }
     &__infos {

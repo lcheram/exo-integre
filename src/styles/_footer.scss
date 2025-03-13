@@ -59,9 +59,9 @@ footer {
     align-items: end;
   }
   .partners {
+    // aligner les logo au centre et les fill en blanc
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
-    align-items: center;
   }
 }
 

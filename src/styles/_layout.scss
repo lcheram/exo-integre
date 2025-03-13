@@ -5,11 +5,22 @@
   &::before {
     content: "";
     position: absolute;
-    height: 3rem;
-    width: 15rem;
+    height: 2rem;
+    width: 10rem;
     background: url("../images/elts/pattern-stripes-left.png");
-    background-size: 15rem 3rem;
+    background-size: 10rem 2rem;
     margin-block-start: -1rem;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2rem;
+    width: 15rem;
+    background: url("../images/elts/pattern-stripes-right.png");
+    background-size: 15rem 2rem;
+    margin-block-start: -1rem;
+    inset-inline: auto 0;
+    inset-block: 0 auto;
   }
 }
 
@@ -24,6 +35,7 @@
       position: relative;
       margin-inline: 2rem;
       width: 70%;
+      z-index: 10;
     }
   }
   &__text {
@@ -35,6 +47,7 @@
       padding-inline: 1rem;
       font-size: 3rem;
       color: white;
+      z-index: 11;
     }
     p {
       display: none;
@@ -52,10 +65,12 @@
   align-items: center;
   gap: 1rem;
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700; // ne fonctionne pas, souci avec ma font variable
     text-transform: uppercase;
     color: var(--main-color);
     text-align: center;
+    padding-block: 2rem;
   }
   p {
     text-align: center;
@@ -100,6 +115,11 @@ form {
   }
 }
 
+.bold_text {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
 .hero {
   background: var(--bg-color);
   margin-block: 0;
@@ -142,10 +162,16 @@ form {
   }*/
   .banner {
     &::before {
-      height: 4rem;
-      width: 20rem;
-      background-size: 20rem 4rem;
-      margin-block-start: -2rem;
+      height: 3rem;
+      width: 17rem;
+      background-size: 17rem 3rem;
+      margin-block-start: -1.5rem;
+    }
+    &::after {
+      height: 3rem;
+      width: 25rem;
+      background-size: 25rem 3rem;
+      margin-block-start: -1.5rem;
     }
     &_content {
       picture {
@@ -192,18 +218,11 @@ form {
       }
     }
   }*/
-  .banner {
-    &::before {
-      height: 4rem;
-      width: 20rem;
-      background-size: 20rem 4rem;
-      margin-block-start: -2rem;
-    }
-  }
+
   .banner_content {
     grid-template-columns: repeat(2, 1fr);
     &__text {
-      margin-inline-end: 6rem;
+      margin-inline-end: 8rem;
       align-items: start;
       display: flex;
       flex-direction: column;
