@@ -5,8 +5,8 @@
   &::before {
     content: "";
     position: absolute;
-    height: 3rem; 
-    width: 15rem; 
+    height: 3rem;
+    width: 15rem;
     background: url("../images/elts/pattern-stripes-left.png");
     background-size: 15rem 3rem;
     margin-block-start: -1rem;
@@ -16,15 +16,15 @@
 .banner_content {
   display: grid;
   picture {
-  display: flex;
-  width: 100%;
-  margin-block-start: -80px;
-  justify-content: center;
-  img {
-    position: relative;
-    margin-inline: 2rem;
-    width: 70%;
-  }
+    display: flex;
+    width: 100%;
+    margin-block-start: -80px;
+    justify-content: center;
+    img {
+      position: relative;
+      margin-inline: 2rem;
+      width: 70%;
+    }
   }
   &__text {
     display: flex;
@@ -38,11 +38,10 @@
     }
     p {
       display: none;
+      line-height: 2rem;
     }
   }
 }
-
-
 
 .form_speaker {
   // revoir ici si vmt ce sont les labels qui partent ou bien s'ils sont là sauf le textarea ? perso je trouve ça plus jolie quand les labels ne sont pas là
@@ -70,9 +69,10 @@
     padding-block: 1rem;
     margin-block-end: 1rem;
     width: 100%;
+    font-size: 1.5rem;
   }
   input[textarea] {
-    // ne fonctionne pas, je dois sûrement remettre mes labels pour les 4 premiers champs et bosser cet input seul ??? ou changer ordre commandes ? 
+    // ne fonctionne pas, je dois sûrement remettre mes labels pour les 4 premiers champs et bosser cet input seul ??? ou changer ordre commandes ?
     border: 1px solid black;
   }
 }
@@ -116,14 +116,14 @@ form {
 }
 
 .home {
-  font-size: 1px; //lisible accessibilité ? 
+  font-size: 1px; //lisible accessibilité ?
   &::before {
-    font-family: 'codeconf' !important;
+    font-family: "codeconf" !important;
     font-size: 1rem;
     content: "\e943";
     color: var(--cta1-color);
   }
-  &::after { 
+  &::after {
     content: " ｜";
     font-size: 1rem;
     color: var(--cta1-color);
@@ -146,6 +146,13 @@ form {
       width: 20rem;
       background-size: 20rem 4rem;
       margin-block-start: -2rem;
+    }
+    &_content {
+      picture {
+        img {
+          max-width: 50%;
+        }
+      }
     }
   }
   form {
@@ -196,19 +203,20 @@ form {
   .banner_content {
     grid-template-columns: repeat(2, 1fr);
     &__text {
-    margin-inline-end: 6rem;
-    align-items: start;
-    display: flex;
-    flex-direction: column;
-    h2 {
-      margin-block-start: 0;
-      //align-self: center;
-      padding-inline: 0;
+      margin-inline-end: 6rem;
+      align-items: start;
+      display: flex;
+      flex-direction: column;
+      h2 {
+        margin-block-start: 0;
+        //align-self: center;
+        padding-inline: 0;
+      }
+      p {
+        display: block;
+        color: white;
+        font-size: 1.5rem;
+      }
     }
-    p {
-    display: block;
-    color: white;
-    font-size: 1.5rem;
   }
 }
-}}

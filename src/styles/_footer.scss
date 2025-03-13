@@ -18,15 +18,17 @@ footer {
     margin-block-start: -30px; // revoir les unités de mesure
     text-transform: lowercase;
     &::after {
-      font-family: 'codeconf' !important;
+      font-family: "codeconf" !important;
       content: "  \e945  \e944";
-
     }
   }
 }
 
-.localisation__map {
-  display: none;
+.localisation {
+  margin-block-start: 3rem;
+  &__map {
+    display: none;
+  }
 }
 
 .partners {

@@ -6,7 +6,6 @@
 
 body {
   margin: 0;
-  
 }
 
 h1,
@@ -26,6 +25,14 @@ h2 {
 h3 {
   font-weight: 900;
   font-size: 1.5rem;
+  padding-block-end: 1rem;
+}
+
+h4 {
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding-block-end: 1rem;
 }
 
 img {
@@ -40,7 +47,8 @@ ul {
 
 a {
   text-decoration: none;
-  padding: 1rem;
+  cursor: pointer;
+  color: var(--footer-color);
 }
 
 button {
@@ -52,4 +60,7 @@ button {
 p {
   font-family: "museo";
   font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  margin-block: 0;
 }

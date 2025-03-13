@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'codeconf';
-  src:  url('../fonts/codeconf/codeconf.woff?oat0m9') format('woff');
+  font-family: "codeconf";
+  src: url("../fonts/codeconf/codeconf.woff?oat0m9") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -9,7 +9,7 @@
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'codeconf' !important;
+  font-family: "codeconf" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -87,21 +87,21 @@
 @font-face {
   font-family: "museo";
   src: url("../fonts/museo/museo300.woff2") format("woff2"),
-       url("../fonts/museo/museo300.woff") format("woff");
+    url("../fonts/museo/museo300.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "museo";
   src: url("../fonts/museo/museo500.woff2") format("woff2"),
-       url("../fonts/museo/museo500.woff") format("woff");
+    url("../fonts/museo/museo500.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "museo";
   src: url("../fonts/museo/museo700.woff2") format("woff2"),
-       url("../fonts/museo/museo700.woff") format("woff");
+    url("../fonts/museo/museo700.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -109,7 +109,8 @@
 /* maven */
 @font-face {
   font-family: "maven-v";
-  src: url("../fonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/maven_Pro/MavenPro-VariableFont_wght.ttf")
+    format("truetype");
   font-style: normal;
   font-weight: 400;
 }

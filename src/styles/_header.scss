@@ -14,16 +14,17 @@
   &__icons {
     display: flex;
     font-size: 1px;
-    &--schedule::before { // mais c'est cliquable en élément before du li ? non hein, je devrais mettre dans le a, un bien dans un <i> élément icon // fontawesome lui-même dans le <a> et donc cliquable ???
-      font-family: 'codeconf' !important;
-      font-size: 2rem;
-      content: "\e93f";
+    &--schedule::before {
+      // mais c'est cliquable en élément before du li ? non hein, je devrais mettre dans le a, un bien dans un <i> élément icon // fontawesome lui-même dans le <a> et donc cliquable ???
+      font-family: "codeconf" !important;
+      font-size: 1.5rem;
+      content: "\e93f  ";
       color: var(--footer-color);
     }
     &--menu::before {
-      font-family: 'codeconf' !important;
-      font-size: 2rem;
-      content: "\e93e";
+      font-family: "codeconf" !important;
+      font-size: 1.5rem;
+      content: "  \e93e";
       color: var(--footer-color);
     }
   }
@@ -58,20 +59,21 @@
       display: flex;
       gap: 1rem;
       &--schedule::before {
-        font-family: 'codeconf' !important;
+        font-family: "codeconf" !important;
         font-size: 1.5rem;
         content: "\e93f  ";
         color: var(--footer-color);
       }
       &--search {
         font-size: 1px;
-      &::before {
-        font-family: 'codeconf' !important;
-        font-size: 1.5rem;
-        content: "\e940";
-        color: var(--cta1-color);
+        &::before {
+          font-family: "codeconf" !important;
+          font-size: 1.5rem;
+          content: "\e940";
+          color: var(--cta1-color);
+        }
       }
-    }}
+    }
   }
 }
 
