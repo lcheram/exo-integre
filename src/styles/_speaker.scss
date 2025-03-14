@@ -11,7 +11,7 @@
     flex-direction: column;
     &-name {
       font-size: 1.5rem;
-      color: var(--speaker_title_color); // faire une var color title
+      color: var(--speaker_title_color);
     }
     &-school {
       font-size: 1.3rem;
@@ -117,14 +117,13 @@
         position: absolute;
         height: 2rem;
         width: 9rem;
-        background: url("../images/elts/pattern_stripes.png"); // changer structure container dans html pour mettre ça sur le bon niveau et object fit ?
+        background: url("../images/elts/pattern_stripes.png");
         background-size: 10rem;
         align-self: end;
         z-index: 3;
       }
       .gradient {
         &::before {
-          // ne fonctionne pas bonjouuuuuur
           content: "";
           position: absolute;
           background: var(--gradient-lin2);
@@ -135,7 +134,7 @@
           background-size: 100%;
           mix-blend-mode: hard-light;
           opacity: 30%;
-        } // changer valeur dégradé + rajout div autour de l'image uniquement dans élément speaker_main_portrait. Attention, ça change la disposition de mon image en mobile
+        }
       }
       img {
         border-radius: 0;

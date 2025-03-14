@@ -5,11 +5,21 @@
   justify-content: space-between;
   align-items: center;
   //border: 2px solid pink;
+  position: relative;
+
   h1 {
     font-size: 1px;
+    align-self: start;
+    //margin-block-start: -1rem;
   }
   img {
     width: 10rem;
+  }
+  &__menu {
+    display: flex; // p-e pas en fait ...
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: start;
   }
   &__icons {
     display: flex;
@@ -20,13 +30,67 @@
       font-size: 1.5rem;
       content: "\e93f  ";
       color: var(--footer-color);
+      padding-inline-start: 1rem;
     }
     &--menu::before {
       font-family: "codeconf" !important;
       font-size: 1.5rem;
       content: "  \e93e";
       color: var(--footer-color);
+      padding-inline-start: 1rem;
     }
+  }
+  &__overlay {
+    background: var(--main-color);
+    //display: none;
+    display: flex; // mis la classe hidden dessus
+    margin: -1rem;
+    z-index: 30;
+    //margin-inline-end: -11rem;
+    position: absolute;
+    color: white;
+    height: 400px;
+    //width: 0;
+    //overflow: hidden;
+    font-family: "museo";
+    inset: 0;
+    padding-block-end: 1rem;
+    padding-inline: 1rem;
+    flex-direction: column;
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      padding-block: 1rem;
+    }
+    &--items {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: end;
+      font-size: 1.7rem; // bon, tout est cassé, mais on est vendredi et je manque de sommeil donc tant pis <3
+    }
+    &--item {
+      //display: flex;
+      color: white;
+      font-family: "museo";
+      list-style: none;
+      padding: 0.3rem;
+    }
+  }
+}
+
+.logo_mobile {
+  font-family: 1px;
+}
+
+.mobile_close_menu {
+  align-self: center;
+  font-size: 1px;
+  &::before {
+    font-family: "codeconf" !important;
+    font-size: 1.5rem;
+    content: "\e93f  ";
+    color: var(--cta2-color);
   }
 }
 
@@ -49,20 +113,27 @@
     &-list {
       display: flex;
       gap: 1rem;
+      & > *:not(:last-child)::after {
+        content: " ｜"; // yeah
+      }
     }
-    &-item {
+    /*&-item {
       &::after {
         content: " ｜";
       }
-    }
+    }*/
     &-icons {
       display: flex;
       gap: 1rem;
-      &--schedule::before {
-        font-family: "codeconf" !important;
-        font-size: 1.5rem;
-        content: "\e93f  ";
-        color: var(--footer-color);
+      &--schedule {
+        display: flex;
+        gap: 1rem;
+        &::before {
+          font-family: "codeconf" !important;
+          font-size: 1.5rem;
+          content: "\e93f  ";
+          color: var(--footer-color);
+        }
       }
       &--search {
         font-size: 1px;

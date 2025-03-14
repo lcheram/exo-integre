@@ -19,13 +19,50 @@
             />Code Conf 2025
           </h1>
           <div class="mobile_nav__menu">
-            <ul class="mobile_nav__icons">
+            <div class="mobile_nav__icons">
+              <a href="#"
+                ><li class="mobile_nav__icons--schedule">Schedule</li></a
+              >
+              <a class="mobile_nav__icons--menu" href="#"><li>Menu</li></a>
+            </div>
+            <div class="mobile_nav__overlay hidden">
+              <div class="mobile_nav__overlay--header">
+                <h1 class="logo_mobile">
+                  <a href="#"
+                    ><img
+                      src="images/logos_assets_codeconf/logo2023.svg"
+                      alt=""
+                    />CodeConf</a
+                  >
+                </h1>
+                <!--oups y a deux h1-->
+                <a class="mobile_close_menu" href="">Close</a>
+              </div>
+              <ul class="mobile_nav__overlay--items">
+                <a href="#"
+                  ><li class="mobile_nav__overlay--item">Search</li></a
+                >
+                <a href="#"><li class="mobile_nav__overlay--item">Event</li></a>
+                <a href="#"
+                  ><li class="mobile_nav__overlay--item">Speakers</li></a
+                >
+                <a href="#"><li class="mobile_nav__overlay--item">Team</li></a>
+                <a href="#"
+                  ><li class="mobile_nav__overlay--item">Contact</li></a
+                >
+                <a href="#"
+                  ><li class="mobile_nav__overlay--item">Get Tickets</li></a
+                >
+              </ul>
+            </div>
+            <!--ne fonctionne pas de ouf, mais vraiment la fatigue ajd, sorry not sorry-->
+
+            <!--<ul class="mobile_nav__icons">
               <li class="mobile_nav__icons--schedule">
                 <a href="#">Schedule</a>
-                <!--le pseudo element ne sera pas cliquable car en dehors du a, et dans le li : REFAIRE NAV-->
               </li>
               <li class="mobile_nav__icons--menu"><a href="#">Menu</a></li>
-            </ul>
+            </ul>-->
           </div>
           <!--créer une autre div avec les liens qui vont s'afficher en mode overlay et faire en sorte que ça sorte bien du viewport, et quand on clique sur le menu, ça apparaît (classe active ? toggle class js ?)-->
         </nav>
@@ -40,23 +77,22 @@
 
           <div class="desktop_nav__menu">
             <ul class="desktop_nav__menu-list">
-              <li class="desktop_nav__menu-item"><a href="#">Event</a></li>
-              <li class="desktop_nav__menu-item"><a href="#">Speakers</a></li>
-              <li class="desktop_nav__menu-item"><a href="#">Team</a></li>
-              <li class="desktop_nav__menu-item"><a href="#">Contact</a></li>
+              <a href="#" class="desktop_nav__menu-item">Event</a>
+              <a href="#" class="desktop_nav__menu-item">Speakers</a>
+              <a href="#" class="desktop_nav__menu-item">Team</a>
+              <a href="#" class="desktop_nav__menu-item">Contact</a>
             </ul>
-            <div class="desktop_nav__menu-list">
-              <ul class="desktop_nav__menu-icons">
-                <li class="desktop_nav__menu-icons--schedule">
-                  <a href="#">Schedule</a>
-                </li>
-                <!--schedule avec pseudo element before font icon moon-->
-                <li class="desktop_nav__menu-icons--search">
-                  <a href="#">Search</a>
-                </li>
+            <ul class="desktop_nav__menu-icons">
+               <a href="#" class="desktop_nav__menu-icons--schedule">
+                <li>Schedule</li></a>
+              
+              <!--schedule avec pseudo element before font icon moon-->
+              <a href="#" class="desktop_nav__menu-icons--search"><li>
+                Search
+              </li></a>
                 <!--search desktop juste icone visible, et search en pseudo element after non visible ?-->
-              </ul>
-            </div>
+            </ul>
+          </div>
           </div>
         </nav>
       </header>
@@ -78,7 +114,6 @@
                 srcset="images/page-picture/presents@3x.png"
               />
               <img src="" alt="gars qui représente les talk là" />
-              <!--reconstruire la structure de la banner pour gérer les pseudos éléments + mettre bakcground gradient linear sur quelle div ? pas image, ni div parent image ? -->
             </picture>
 
             <div class="banner_content__text">
@@ -100,8 +135,6 @@
           </div>
 
           <div class="speakers_all">
-            <!--rajout div content deploy en display none de base-->
-
             <div class="speaker">
               <div class="speaker_main">
                 <div class="speaker_main__infos">
@@ -110,13 +143,12 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img
-                    src="images/orators/chris@3x.jpg"
-                    alt="Chris' portrait"
-                  /></div>
-                  <a class="info" href="#">More info</a>
-                  <!--attention, renvoie au sommet de la page, faudra désactiver le comportement par défaut du lien dans le js ?-->
-                
+                    <img
+                      src="images/orators/chris@3x.jpg"
+                      alt="Chris' portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -136,7 +168,6 @@
                     <p>R1</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -149,9 +180,12 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/sara@3x.jpg" alt="Sara's portrait" /></div>
+                    <img
+                      src="images/orators/sara@3x.jpg"
+                      alt="Sara's portrait"
+                    />
+                  </div>
                   <a class="info hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -182,8 +216,12 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/eric@3x.jpg" alt="Eric's portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
+                    <img
+                      src="images/orators/eric@3x.jpg"
+                      alt="Eric's portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
@@ -215,9 +253,9 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/lea@3x.jpg" alt="Lea's portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
+                    <img src="images/orators/lea@3x.jpg" alt="Lea's portrait" />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -234,7 +272,6 @@
                     <p>R2</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -247,17 +284,23 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/shirley@3x.jpg" alt="Shirley's portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
+                    <img
+                      src="images/orators/shirley@3x.jpg"
+                      alt="Shirley's portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                 </div>
               </div>
               <div class="speaker_details hidden">
                 <h3 class="speaker_details__name">Shirley Wu</h3>
                 <div class="speaker_details__description">
-                  <h4 class="speaker_details__title">655 Frustrations Doing Data Visualization</h4>
+                  <h4 class="speaker_details__title">
+                    655 Frustrations Doing Data Visualization
+                  </h4>
                   <p class="speaker_details__text">
-                    Visualization teams spend more time visualizing than those on embedded teams
+                    Visualization teams spend more time visualizing than those
+                    on embedded teams
                   </p>
                 </div>
                 <div class="speaker_details__footer">
@@ -266,7 +309,6 @@
                     <p>R2</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -279,9 +321,12 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/luke@3x.jpg" alt="Luke's portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
+                    <img
+                      src="images/orators/luke@3x.jpg"
+                      alt="Luke's portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -289,7 +334,9 @@
                 <div class="speaker_details__description">
                   <h4 class="speaker_details__title">The Way of the Web</h4>
                   <p class="speaker_details__text">
-                    Science fiction is not about predicting the future, but about what we need to have a future</p>
+                    Science fiction is not about predicting the future, but
+                    about what we need to have a future
+                  </p>
                 </div>
                 <div class="speaker_details__footer">
                   <div class="speaker_details__footer_practical">
@@ -297,7 +344,6 @@
                     <p>R1</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -310,17 +356,25 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/nico@3x.jpg" alt="Nicolas' portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
+                    <img
+                      src="images/orators/nico@3x.jpg"
+                      alt="Nicolas' portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
                 <h3 class="speaker_details__name">Nicolas Gallagher</h3>
                 <div class="speaker_details__description">
-                  <h4 class="speaker_details__title">Making SVG icon libraries for React apps</h4>
+                  <h4 class="speaker_details__title">
+                    Making SVG icon libraries for React apps
+                  </h4>
                   <p class="speaker_details__text">
-                    Using SVG is currently the best way to create icon libraries for apps</p>
+                    Using SVG is currently the best way to create icon libraries
+                    for apps
+                  </p>
                 </div>
                 <div class="speaker_details__footer">
                   <div class="speaker_details__footer_practical">
@@ -341,8 +395,12 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/rachel@3x.jpg" alt="Rachel's portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
+                    <img
+                      src="images/orators/rachel@3x.jpg"
+                      alt="Rachel's portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
@@ -351,7 +409,8 @@
                 <div class="speaker_details__description">
                   <h4 class="speaker_details__title">Making Things Better</h4>
                   <p class="speaker_details__text">
-                    Redefining the Technical Possibilities of CSS</p>
+                    Redefining the Technical Possibilities of CSS
+                  </p>
                 </div>
                 <div class="speaker_details__footer">
                   <div class="speaker_details__footer_practical">
@@ -372,17 +431,25 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/stephen@3x.jpg" alt="Stephen's portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
+                    <img
+                      src="images/orators/stephen@3x.jpg"
+                      alt="Stephen's portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
                 <h3 class="speaker_details__name">Stephen Hay</h3>
                 <div class="speaker_details__description">
-                  <h4 class="speaker_details__title">Zero interface thinking</h4>
+                  <h4 class="speaker_details__title">
+                    Zero interface thinking
+                  </h4>
                   <p class="speaker_details__text">
-                    Everything we introduce has the potential to ruin everything. Ask: Is this absolutely necessary?</p>
+                    Everything we introduce has the potential to ruin
+                    everything. Ask: Is this absolutely necessary?
+                  </p>
                 </div>
                 <div class="speaker_details__footer">
                   <div class="speaker_details__footer_practical">
@@ -403,17 +470,25 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/paul@3x.jpg" alt="Pauls portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
+                    <img
+                      src="images/orators/paul@3x.jpg"
+                      alt="Pauls portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
                 <h3 class="speaker_details__name">Paul Irish</h3>
                 <div class="speaker_details__description">
-                  <h4 class="speaker_details__title">Developer Tooling, lighthouse</h4>
+                  <h4 class="speaker_details__title">
+                    Developer Tooling, lighthouse
+                  </h4>
                   <p class="speaker_details__text">
-                    Auditing, performance metrics, and best practices for Progressive Web Apps</p>
+                    Auditing, performance metrics, and best practices for
+                    Progressive Web Apps
+                  </p>
                 </div>
                 <div class="speaker_details__footer">
                   <div class="speaker_details__footer_practical">
@@ -424,7 +499,8 @@
                   <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
-            </div><div class="speaker">
+            </div>
+            <div class="speaker">
               <div class="speaker_main">
                 <div class="speaker_main__infos">
                   <h3 class="speaker_main__infos-name">Nicole Sullivan</h3>
@@ -432,8 +508,12 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/nicole@3x.jpg" alt="Nicole's portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
+                    <img
+                      src="images/orators/nicole@3x.jpg"
+                      alt="Nicole's portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
@@ -442,7 +522,9 @@
                 <div class="speaker_details__description">
                   <h4 class="speaker_details__title">OOCSS code standards</h4>
                   <p class="speaker_details__text">
-                    Code conventions are important for the long-term maintainability of code</p>
+                    Code conventions are important for the long-term
+                    maintainability of code
+                  </p>
                 </div>
                 <div class="speaker_details__footer">
                   <div class="speaker_details__footer_practical">
@@ -453,7 +535,8 @@
                   <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
-            </div><div class="speaker">
+            </div>
+            <div class="speaker">
               <div class="speaker_main">
                 <div class="speaker_main__infos">
                   <h3 class="speaker_main__infos-name">Brad Frost</h3>
@@ -461,8 +544,12 @@
                 </div>
                 <div class="speaker_main__portrait">
                   <div class="gradient">
-                  <img src="images/orators/brad@3x.jpg" alt="Brad's portrait" /></div>
-                  <a class="hidden" href="#">More info</a>
+                    <img
+                      src="images/orators/brad@3x.jpg"
+                      alt="Brad's portrait"
+                    />
+                  </div>
+                  <a class="info hidden" href="#">More info</a>
                   <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
@@ -471,7 +558,8 @@
                 <div class="speaker_details__description">
                   <h4 class="speaker_details__title">Atomic Design</h4>
                   <p class="speaker_details__text">
-                    We can construct design systems in a more methodical way</p>
+                    We can construct design systems in a more methodical way
+                  </p>
                 </div>
                 <div class="speaker_details__footer">
                   <div class="speaker_details__footer_practical">
@@ -483,10 +571,6 @@
                 </div>
               </div>
             </div>
-
-          </div>
-        </div>
-
           </div>
         </div>
 
@@ -545,14 +629,15 @@
               <label for="details"
                 >Short details <sup>[separate by comma]</sup></label
               >
-              <!--sup c'est pas ouf, de toutes façons je bosse pas sur mes labels vu qu'ils sont pas bisibles à l'écran .. ou alors je remets les labels pour les 4 premiers champs et puis je laisse le placeholder pour le message short details ?-->
-              <input
-                type="textarea"
-                rows="10"
+              <!--je n'arrive pas à changer la hauteur de mon input textarea, même en jouant sur les rows, ni dans la height en CSS (enfin si mais ça casse tous les inputs, même quand j'appelle uniquement l'ID de cet input ci, et quand j'écris dedans, ça ne wrap pas le texte une fois arrivé à la fin de la ligne)-->
+              <textarea
+                rows="4"
+                cols="20"
                 id="details"
+                wrap="hard"
                 required
                 placeholder="Short details*"
-              />
+              ></textarea>
             </div>
             <button class="btn-form" type="submit" required>
               Send your Subject

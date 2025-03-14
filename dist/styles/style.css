@@ -296,21 +296,29 @@ p {
 }
 .form_speaker input {
   border: none;
-  border-block-end: 1px solid black;
+  border-block-end: 1px solid #646464;
   padding-block: 1rem;
-  margin-block-end: 1rem;
-  width: 100%;
   font-size: 1.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+}
+.form_speaker input:focus {
+  border: none;
 }
 .form_speaker #details {
-  border: 1px solid black;
-  display: flex;
+  border: 1px solid #646464;
+  resize: none;
+  width: 100%;
+  font-family: "maven-v";
+  font-size: 1.4rem;
+  padding: 1rem;
+  line-height: 2rem;
 }
 
 form {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 1rem;
   width: 100%;
 }
@@ -396,7 +404,7 @@ form button {
   form {
     width: 90%;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
   }
   .name {
     grid-area: 1/1;
@@ -408,7 +416,7 @@ form button {
     grid-area: 3/1/-1/-1;
   }
   .btn-form {
-    grid-area: 4/1/-1/-1;
+    grid-area: 5/1/-1/-1;
     border-radius: 5rem;
     padding-inline: 1.5rem;
     padding-block: 1rem;
@@ -455,6 +463,10 @@ form button {
     max-width: 80%;
     padding-block: 1rem;
   }
+  #details {
+    line-height: 2rem;
+    font-size: 1rem;
+  }
 }
 .mobile_nav {
   margin: 1rem;
@@ -462,12 +474,20 @@ form button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .mobile_nav h1 {
   font-size: 1px;
+  align-self: start;
 }
 .mobile_nav img {
   width: 10rem;
+}
+.mobile_nav__menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
 }
 .mobile_nav__icons {
   display: flex;
@@ -478,12 +498,61 @@ form button {
   font-size: 1.5rem;
   content: "\e93f  ";
   color: var(--footer-color);
+  padding-inline-start: 1rem;
 }
 .mobile_nav__icons--menu::before {
   font-family: "codeconf" !important;
   font-size: 1.5rem;
   content: "  \e93e";
   color: var(--footer-color);
+  padding-inline-start: 1rem;
+}
+.mobile_nav__overlay {
+  background: var(--main-color);
+  display: flex;
+  margin: -1rem;
+  z-index: 30;
+  position: absolute;
+  color: white;
+  height: 400px;
+  font-family: "museo";
+  inset: 0;
+  padding-block-end: 1rem;
+  padding-inline: 1rem;
+  flex-direction: column;
+}
+.mobile_nav__overlay--header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+.mobile_nav__overlay--items {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  font-size: 1.7rem;
+}
+.mobile_nav__overlay--item {
+  color: white;
+  font-family: "museo";
+  list-style: none;
+  padding: 0.3rem;
+}
+
+.logo_mobile {
+  font-family: 1px;
+}
+
+.mobile_close_menu {
+  align-self: center;
+  font-size: 1px;
+}
+.mobile_close_menu::before {
+  font-family: "codeconf" !important;
+  font-size: 1.5rem;
+  content: "\e93f  ";
+  color: var(--cta2-color);
 }
 
 .desktop_nav {
@@ -502,15 +571,24 @@ form button {
   gap: 1rem;
   font-size: 1.2rem;
   align-items: center;
+  /*&-item {
+    &::after {
+      content: " ｜";
+    }
+  }*/
 }
 .desktop_nav__menu-list {
   display: flex;
   gap: 1rem;
 }
-.desktop_nav__menu-item::after {
+.desktop_nav__menu-list > *:not(:last-child)::after {
   content: " ｜";
 }
 .desktop_nav__menu-icons {
+  display: flex;
+  gap: 1rem;
+}
+.desktop_nav__menu-icons--schedule {
   display: flex;
   gap: 1rem;
 }
@@ -812,7 +890,7 @@ footer {
   border-radius: 30px;
   text-align: center;
   margin-block: 1rem;
-  font-size: 1.3rem;
+  font-size: 0.8rem;
 }
 #geo-local::before {
   font-family: "codeconf" !important;
