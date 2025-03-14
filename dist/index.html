@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <!--sûrement moyen de faire juste une seule nav et de changer les paramètres quand en desktop : vérifier et tester, pour le moment je pars sur 2 nav et j'en cache une quand media query, because je suis fatigay (but still fabulous)-->
+        <!--FAIRE UNE SEULE NAV-->
         <nav class="mobile_nav">
           <h1 class="header_title">
             <img
@@ -42,6 +42,7 @@
                 <a href="#"
                   ><li class="mobile_nav__overlay--item">Search</li></a
                 >
+                <!--attention, je dois retirer mes li et ul, changer mon ul en div, parce que je ne peux pas mettre un élément block dans un element inline :D-->
                 <a href="#"><li class="mobile_nav__overlay--item">Event</li></a>
                 <a href="#"
                   ><li class="mobile_nav__overlay--item">Speakers</li></a
@@ -124,6 +125,7 @@
           </div>
 
           <div class="speakers_all">
+            <!--FAIRE UNE SEULE PARTIE DE CARD, ça fera moins de lignes de code, et ça rendra le javascript plus facile à créer pour la classe hidden-->
             <div class="speaker">
               <div class="speaker_main">
                 <div class="speaker_main__infos">
