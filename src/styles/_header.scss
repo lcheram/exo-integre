@@ -110,29 +110,43 @@
     gap: 1rem;
     font-size: 1.2rem;
     align-items: center;
+    &-item {
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--cta2-color);
+      }
+    }
+
     &-list {
       display: flex;
       gap: 1rem;
+
       & > *:not(:last-child)::after {
-        content: " ｜"; // yeah
+        content: " ｜"; // yeah ça marche ! juste le problème c'est qu'en hover j'aimerais que ces éléments là ne prennent pas la couleur définie sur le hover dans menu-item ... c'est un problème pour le moi du futur !
       }
     }
-    /*&-item {
-      &::after {
-        content: " ｜";
-      }
-    }*/
     &-icons {
       display: flex;
       gap: 1rem;
       &--schedule {
         display: flex;
         gap: 1rem;
+        transition: all 0.2s;
+        &:hover {
+          //text-decoration: underline;
+          color: var(--cta2-color);
+        }
         &::before {
           font-family: "codeconf" !important;
           font-size: 1.5rem;
           content: "\e93f  ";
           color: var(--footer-color);
+          &:hover {
+            color: var(
+              --cta2-color
+            ); // ne fonctionne pas en hover sur l'élément before
+          }
         }
       }
       &--search {

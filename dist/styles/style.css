@@ -571,11 +571,12 @@ form button {
   gap: 1rem;
   font-size: 1.2rem;
   align-items: center;
-  /*&-item {
-    &::after {
-      content: " ｜";
-    }
-  }*/
+}
+.desktop_nav__menu-item {
+  transition: all 0.2s;
+}
+.desktop_nav__menu-item:hover {
+  color: var(--cta2-color);
 }
 .desktop_nav__menu-list {
   display: flex;
@@ -591,12 +592,19 @@ form button {
 .desktop_nav__menu-icons--schedule {
   display: flex;
   gap: 1rem;
+  transition: all 0.2s;
+}
+.desktop_nav__menu-icons--schedule:hover {
+  color: var(--cta2-color);
 }
 .desktop_nav__menu-icons--schedule::before {
   font-family: "codeconf" !important;
   font-size: 1.5rem;
   content: "\e93f  ";
   color: var(--footer-color);
+}
+.desktop_nav__menu-icons--schedule::before:hover {
+  color: var(--cta2-color);
 }
 .desktop_nav__menu-icons--search {
   font-size: 1px;
@@ -756,7 +764,6 @@ form button {
     display: flex;
   }
   .speaker_main__portrait a {
-    display: none;
     position: absolute;
     inset: 60% 35%;
     border-radius: 360rem;
@@ -773,6 +780,9 @@ form button {
     font-family: "museo";
     text-align: center;
     z-index: 20;
+    box-shadow: 0 1px 13px 24px rgba(228, 65, 84, 0.15), 0 -1px 0 20px rgba(238, 231, 224, 0.07);
+    opacity: 100%;
+    transition: all 0.5s;
   }
   .speaker_main__infos {
     display: flex;
@@ -811,7 +821,6 @@ form button {
 footer {
   background: var(--footer-color);
   color: white;
-  padding-inline: 2rem;
 }
 
 .tickets {
@@ -819,6 +828,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding-inline: 2rem;
 }
 .tickets__button {
   background: var(--cta1-color);
@@ -847,6 +857,7 @@ footer {
 
 .localisation {
   margin-block-start: 3rem;
+  padding-inline: 2rem;
 }
 .localisation__map {
   display: none;
@@ -854,6 +865,7 @@ footer {
 
 .partners {
   justify-content: space-between;
+  padding-inline: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -937,6 +949,7 @@ footer {
     padding-block: 2rem;
   }
   .social {
+    margin-inline: 2rem;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
