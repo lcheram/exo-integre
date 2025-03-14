@@ -10,7 +10,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <!--sûrement moyen de faire juste une seule nav et de changer les paramètres quand en desktop : vérifier et tester, pour le moment je pars sur 2 nav et j'en cache une quand media query-->
+        <!--sûrement moyen de faire juste une seule nav et de changer les paramètres quand en desktop : vérifier et tester, pour le moment je pars sur 2 nav et j'en cache une quand media query, because je suis fatigay (but still fabulous)-->
         <nav class="mobile_nav">
           <h1 class="header_title">
             <img
@@ -57,7 +57,6 @@
             </div>
             <!--ne fonctionne pas de ouf, mais vraiment la fatigue ajd, sorry not sorry-->
           </div>
-          <!--créer une autre div avec les liens qui vont s'afficher en mode overlay et faire en sorte que ça sorte bien du viewport, et quand on clique sur le menu, ça apparaît (classe active ? toggle class js ?)-->
         </nav>
 
         <nav class="desktop_nav">
@@ -76,12 +75,13 @@
               <a href="#" class="desktop_nav__menu-item">Contact</a>
             </ul>
             <ul class="desktop_nav__menu-icons">
-               <a href="#" class="desktop_nav__menu-icons--schedule">
-                <li>Schedule</li></a>
-               <a href="#" class="desktop_nav__menu-icons--search">
-                <li>Search</li></a>
+              <a href="#" class="desktop_nav__menu-icons--schedule">
+                <li>Schedule</li></a
+              >
+              <a href="#" class="desktop_nav__menu-icons--search">
+                <li>Search</li></a
+              >
             </ul>
-          </div>
           </div>
         </nav>
       </header>
@@ -192,7 +192,6 @@
                     <p>R1</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -229,7 +228,6 @@
                     <p>R1</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -351,7 +349,6 @@
                     />
                   </div>
                   <a class="info hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -371,7 +368,6 @@
                     <p>R1</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -390,7 +386,6 @@
                     />
                   </div>
                   <a class="info hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -407,7 +402,6 @@
                     <p>R1</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -426,7 +420,6 @@
                     />
                   </div>
                   <a class="info hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -446,7 +439,6 @@
                     <p>R1</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -465,7 +457,6 @@
                     />
                   </div>
                   <a class="info hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -485,7 +476,6 @@
                     <p>R2</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -503,7 +493,6 @@
                     />
                   </div>
                   <a class="info hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -521,7 +510,6 @@
                     <p>R2</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -539,7 +527,6 @@
                     />
                   </div>
                   <a class="info hidden" href="#">More info</a>
-                  <!--ne fonctionne pas sur ce bouton ?-->
                 </div>
               </div>
               <div class="speaker_details hidden">
@@ -556,7 +543,6 @@
                     <p>R2</p>
                   </div>
                   <a class="speaker_details__footer_btn" href="#">About</a>
-                  <!--<button class="speaker_details__footer_btn">About</button>-->
                 </div>
               </div>
             </div>
@@ -574,7 +560,7 @@
           </p>
           <form action="" method="get">
             <div class="name">
-              <!--je mets des div pour garder les labels readable malgré qu'ils soient en font-size zéro, pour des questions d'accessibilité ... p-e une meilleure solution quand même-->
+              <!--je ne comprends plus cette structure, il faudrait la refaire-->
               <label for="name">Name</label>
               <!--label font-size: 1px dans le css-->
               <input
@@ -618,7 +604,6 @@
               <label for="details"
                 >Short details <sup>[separate by comma]</sup></label
               >
-              <!--je n'arrive pas à changer la hauteur de mon input textarea, même en jouant sur les rows, ni dans la height en CSS (enfin si mais ça casse tous les inputs, même quand j'appelle uniquement l'ID de cet input ci, et quand j'écris dedans, ça ne wrap pas le texte une fois arrivé à la fin de la ligne)-->
               <textarea
                 rows="4"
                 cols="20"
@@ -641,82 +626,28 @@
       <footer>
         <div class="tickets">
           <a href="#" class="tickets__button">get ticket</a>
-          <!--rajout icone paypal et carte banque en css pseudo-element after-->
           <p class="tickets__price">$199 USD</p>
         </div>
-        <div class="localisation">
-          <div class="localisation__text">
-            <h3 class="localisation__title">The Las Vegas Convention Center</h3>
-            <p id="geo-local">3150 Paradise Rd., Las Vegas, NV 89109</p>
-            <!--span = changer le style ou bien mettre une classe/id ?-->
-            <p id="geo-txt">
-              The Las Vegas Convention Center (LVCC), located adjacent to the
-              Las Vegas Strip, encompasses approximately 3.2 million square feet
-              with exhibit space of 2 million square feet and meeting space of
-              nearly 250,000 square feet.
-            </p>
-            <p></p>
-          </div>
-          <div class="localisation__map">
-            <img
-              src="images/page-picture/lasvegas_conventioncenter.png"
-              alt="map"
-            />
-          </div>
-        </div>
-        <div class="partners">
-          <a href="#">
-            <img src="images/logos_assets_codeconf/cisco.svg" alt="cisco logo"
-          /></a>
-          <a href="#"
-            ><img
-              class="partners__icon"
-              src="images/logos_assets_codeconf/amazon_s3.svg"
-              alt="s3 amazon logo"
-          /></a>
-          <a href="#"
-            ><img
-              class="partners__icon"
-              src="images/logos_assets_codeconf/nick.svg"
-              alt="nick logo"
-          /></a>
-
-          <a href="#"
-            ><img
-              class="partners__icon"
-              src="images/logos_assets_codeconf/meetup.svg"
-              alt="meetup logo"
-          /></a>
-          <a href="#"
-            ><img
-              class="partners__icon"
-              src="images/logos_assets_codeconf/stripe.svg"
-              alt="stripe logo"
-          /></a>
-          <a href="#"
-            ><img
-              class="partners__icon"
-              src="images/logos_assets_codeconf/mailchimp.svg"
-              alt="mailchimp logo"
-          /></a>
-        </div>
-        <div class="container_footer">
-          <div class="social">
-            <h3 class="social__title">Follow us</h3>
-            <div class="social__content">
-              <div class="social__twitter">
-                <a href="#"
-                  ><img src="" alt="logo twitter" />
-                  <!--element before en fait :   content: "\e946";
-et revoir la structure de l'élément + structure du footer-->
-                  twitter: @codeconf2023</a
-                >
-              </div>
-              <div class="social__slack">
-                <a href="#"
-                  ><img src="" alt="logo slack" /> slack channel: #codeconf2023
-                </a>
-              </div>
+        <div class="footer_grid">
+          <div class="localisation">
+            <div class="localisation__text">
+              <h3 class="localisation__title">
+                The Las Vegas Convention Center
+              </h3>
+              <p id="geo-local">3150 Paradise Rd., Las Vegas, NV 89109</p>
+              <p id="geo-txt">
+                The Las Vegas Convention Center (LVCC), located adjacent to the
+                Las Vegas Strip, encompasses approximately 3.2 million square
+                feet with exhibit space of 2 million square feet and meeting
+                space of nearly 250,000 square feet.
+              </p>
+              <p></p>
+            </div>
+            <div class="localisation__map">
+              <img
+                src="images/page-picture/lasvegas_conventioncenter.png"
+                alt="map"
+              />
             </div>
           </div>
           <div class="contact">
@@ -724,13 +655,73 @@ et revoir la structure de l'élément + structure du footer-->
             <p>+ 702-892-0711</p>
             <p>(speaker's support)</p>
           </div>
-          <div class="copyright">
-            <p>organised by <a href="#">WebeesMeetups.com</a></p>
-            <p>Copyright 2022</p>
+          <div class="partners">
+            <a href="#">
+              <img
+                src="images/logos_assets_codeconf/cisco.svg"
+                alt="cisco logo"
+            /></a>
+            <a href="#"
+              ><img
+                class="partners__icon"
+                src="images/logos_assets_codeconf/amazon_s3.svg"
+                alt="s3 amazon logo"
+            /></a>
+            <a href="#"
+              ><img
+                class="partners__icon"
+                src="images/logos_assets_codeconf/nick.svg"
+                alt="nick logo"
+            /></a>
+
+            <a href="#"
+              ><img
+                class="partners__icon"
+                src="images/logos_assets_codeconf/meetup.svg"
+                alt="meetup logo"
+            /></a>
+            <a href="#"
+              ><img
+                class="partners__icon"
+                src="images/logos_assets_codeconf/stripe.svg"
+                alt="stripe logo"
+            /></a>
+            <a href="#"
+              ><img
+                class="partners__icon"
+                src="images/logos_assets_codeconf/mailchimp.svg"
+                alt="mailchimp logo"
+            /></a>
+          </div>
+          <div class="container_footer">
+            <div class="social">
+              <h3 class="social__title">Follow us</h3>
+              <div class="social__content">
+                <div class="social__twitter">
+                  <a href="#"
+                    ><img src="" alt="logo twitter" />
+                    <!--element before en fait :   content: "\e946";
+et revoir la structure de l'élément + structure du footer-->
+                    twitter: @codeconf2023</a
+                  >
+                </div>
+                <div class="social__slack">
+                  <a href="#"
+                    ><img src="" alt="logo slack" /> slack channel:
+                    #codeconf2023
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="copyright">
+              <p>organised by <a href="#">WebeesMeetups.com</a></p>
+              <p>Copyright 2022</p>
+            </div>
           </div>
         </div>
       </footer>
     </div>
-    <script href="scripts/main.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

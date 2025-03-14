@@ -64,8 +64,13 @@ footer {
 .social {
   border-block: solid 1px white;
   padding-block: 1rem;
+  &__title {
+    margin-inline: 2rem;
+  }
   &__content {
     display: flex;
+    margin-inline: 2rem;
+
     &__title {
       // mauvais sélecteur
       font-family: "museo";
@@ -79,82 +84,132 @@ footer {
   }
 }
 
+.copyright {
+  margin-inline: 2rem;
+  padding-block: 1rem;
+  :first-child {
+    color: white;
+  }
+  color: rgb(224, 178, 97);
+  a {
+    color: white;
+  }
+}
+
+.contact {
+  margin-block: 2rem;
+  margin-inline: 2rem;
+  //display: none;
+}
+
 #geo-local {
   border: 0.5px solid white;
-  padding-inline: 0.2rem;
-  padding-block: 0.5rem;
+  padding-inline: 0.7rem;
+  padding-block: 0.3rem;
   border-radius: 30px;
   text-align: center;
   margin-block: 1rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
+  width: fit-content;
+  justify-self: center;
   &::before {
     font-family: "codeconf" !important;
     content: "\e942  "; // pas le bon code, mais élément fonctionne
   }
 }
 
-#geo-txt {
-  display: none;
-}
-
 @media screen and (min-width: 650px) {
-  .localisation {
-    display: flex;
-    gap: 2rem;
-    align-items: end;
-  }
   .partners {
-    // aligner les logo au centre et les fill en blanc
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr;
   }
-  #geo-txt {
-    display: block;
+  #geo-local {
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-inline: 0;
+    justify-self: start;
   }
-}
 
-@media screen and (min-width: 1000px) {
+  .footer_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
   .localisation {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    &__title {
-      color: var(--second-title);
-      font-size: 2rem;
-    }
-    &__map {
-      display: block;
-    }
+    gap: 2rem;
+    grid-area: 1/1/-1/4;
+    margin-block: 2rem;
   }
   .partners {
-    padding-block-start: 2rem;
+    grid-area: 2/1/2/-1; // ok, bien placé
+  }
+  .contact {
+    grid-area: 1/2/2/-1;
   }
   .container_footer {
+    grid-area: 3/1/3/3;
     display: flex;
-    gap: 2rem;
-    justify-content: space-between;
     padding-block: 2rem;
   }
+  .copyright {
+    grid-area: 3/3/-1/-1;
+  }
+
   .social {
-    margin-inline: 2rem;
+    margin-inline: 1rem;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
     padding-inline-start: 1rem;
   }
-  .copyright {
-    a {
-      color: white;
-    }
+}
+
+@media screen and (min-width: 1000px) {
+  .footer_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .localisation__map {
+    display: block;
+    grid-area: 2/2/1/4;
   }
 
-  #geo-local {
-    border: none;
-    text-align: start;
-    padding-inline: 0;
-    font-weight: 600;
-    font-size: 1.5rem;
-    &::before {
-      content: "";
-    }
+  .localisation__text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    grid-area: 1/1/2/3;
+  }
+
+  .partners {
+    grid-area: 2/1/2/-1; // ok, bien placé
+  }
+
+  .container_footer {
+    grid-area: 3/1/3/3;
+    display: flex;
+    padding-block: 2rem;
+  }
+  .copyright {
+    grid-area: 3/2/-1/-1;
+  }
+
+  .contact {
+    grid-area: 3/3/-1/-1;
+    display: none;
+    //franchement marre en fait, faut vraiment que je refasse du grid BUT NOT TODAY
+  }
+
+  .social {
+    margin-inline: 1rem;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 1rem;
   }
 }
